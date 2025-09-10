@@ -24,7 +24,7 @@ app.use(cors({
 }));
 app.use(cookieParser());
 
-// --- DATABASE OF QUESTIONS ---
+// --- DATABASE OF QUIZ QUESTIONS ---
 const allQuestions = [
     // --- Processo Civil (31 Questions) ---
     { id: 1, discipline: "Processo Civil", code: "Código de Processo Civil", articleNumber: "Artigo 186.º", articleTitle: "Ineptidão da petição inicial", articleText: "1 - É nulo todo o processo quando for inepta a petição inicial.\n2 - Diz-se inepta a petição:\na) Quando falte ou seja ininteligível a indicação do pedido ou da causa de pedir;\nb) Quando o pedido esteja em contradição com a causa de pedir;\nc) Quando se cumulem causas de pedir ou pedidos substancialmente incompatíveis.", question: "Quando é que a petição inicial é considerada inepta?", options: ["Apenas quando falta a indicação do pedido.", "Quando falta ou é ininteligível o pedido ou a causa de pedir, há contradição entre eles, ou cumulação de pedidos/causas de pedir incompatíveis.", "Sempre que o valor da causa não é indicado corretamente.", "Quando não são juntas todas as provas documentais."], correctAnswerIndex: 1, explanation: "O Art. 186.º, n.º 2, elenca as três situações que levam à ineptidão da petição inicial, todas relacionadas com a clareza e coerência do pedido e da causa de pedir, que são elementos essenciais da petição." },
@@ -114,21 +114,610 @@ const allQuestions = [
     { id: 81, discipline: "Deontologia", code: "Estatuto da Ordem dos Advogados", articleNumber: "Artigo 112.º", articleTitle: "Dever de solidariedade", articleText: "5 - Antes de aceitar assumir o patrocínio de uma questão que tenha sido confiada a outro advogado, deve este certificar-se de que o colega foi notificado da revogação do mandato e de que foram pagos os honorários e outras quantias que sejam devidas àquele...", question: "Um cliente pretende mudar de advogado. O novo advogado, antes de aceitar o mandato, deve fazer o quê?", options: ["Criticar o trabalho do colega anterior para justificar a mudança.", "Aceitar imediatamente para garantir o cliente.", "Certificar-se de que o colega anterior foi notificado da revogação e que os seus honorários foram pagos.", "Pedir autorização à Ordem dos Advogados para aceitar o caso."], correctAnswerIndex: 2, explanation: "O Art. 112.º, n.º 5, impõe ao advogado sucessor um dever de solidariedade para com o colega. Antes de aceitar o patrocínio, deve tomar diligências para garantir que a transição é feita de forma correta, incluindo a questão dos honorários devidos ao advogado anterior." }
 ];
 
+// --- DATABASE OF FLASHCARDS ---
+const allFlashcards = [
+    {
+        "id": 1,
+        "discipline": "Deontologia",
+        "front": "Qual o foco principal do estudo para a Ordem dos Advogados, segundo Fergus?",
+        "back": "O estudo deve ser **eminentemente prático**, focando-se na **base legal necessária** para a resolução de problemas, em vez de longas divergências doutrinárias. É crucial referir **todos os artigos relevantes** e as suas relações."
+      },
+      {
+        "id": 2,
+        "discipline": "Deontologia",
+        "front": "Quais são os três princípios basilares da advocacia, considerados estruturantes pelo Estatuto?",
+        "back": "Os três princípios estruturantes são o **princípio da integridade** (Art. 88), o **princípio da independência** (Art. 89) e o **dever geral de correção e urbanidade** (Art. 95)."
+      },
+      {
+        "id": 3,
+        "discipline": "Deontologia",
+        "front": "Qual a *ratio* subjacente ao princípio da integridade previsto no artigo 88 do Estatuto?",
+        "back": "A advocacia é uma **profissão essencial para a administração da justiça**, exigindo um **grau de exigência ética muito elevado** – superior ao do 'homem médio' – para cumprir devidamente o seu mandato. O advogado deve procurar a solução mais justa, **não devendo ganhar a todo o custo ou obter resultados ilícitos**."
+      },
+      {
+        "id": 4,
+        "discipline": "Deontologia",
+        "front": "O que acontece quando um advogado viola o dever de integridade ou probidade, nos termos do artigo 88?",
+        "back": "A violação pode enquadrar-se numa **causa de averiguação de inidoneidade** para o exercício da profissão (Art. 177, nº 1). A falta de idoneidade impede a inscrição (Art. 188, nº 1, al. a))."
+      },
+      {
+        "id": 5,
+        "discipline": "Deontologia",
+        "front": "Qual a ideia subjacente ao princípio da independência do advogado (Art. 89)?",
+        "back": "O advogado deve ser **livre de pressões** (internas ou externas, incluindo do próprio cliente) para poder ser **íntegro** e **administrar a Justiça**, visando o **interesse público**. O interesse pessoal, embora inevitável, nunca deve levar a ações contrárias à justiça ou ao interesse público."
+      },
+      {
+        "id": 6,
+        "discipline": "Deontologia",
+        "front": "O dever geral de correção e urbanidade (Art. 95) pode limitar a defesa dos interesses do cliente?",
+        "back": "**Não**, o dever de urbanidade e correção **não pode impor-se ou sobrepor-se à prossecução dos interesses do cliente**. O advogado deve sempre defender esses interesses, mas de **forma correta e urbana**. Além disso, o advogado tem o dever de assegurar que o seu cliente também seja correto."
+      },
+      {
+        "id": 7,
+        "discipline": "Deontologia",
+        "front": "A independência do advogado é exercida apenas face a entidades externas ou também em relação ao cliente?",
+        "back": "A independência é exercida **também, e em grande parte das vezes, em relação ao próprio cliente**. O advogado deve defender os interesses legítimos do cliente, mas **sempre em estrito cumprimento das normas legais e deontológicas** (Art. 97, nº 2)."
+      },
+      {
+        "id": 8,
+        "discipline": "Deontologia",
+        "front": "Qual é a natureza jurídica da Ordem dos Advogados e como é controlada?",
+        "back": "A Ordem dos Advogados é uma **associação pública que prossegue atribuições de interesse público**, fazendo parte da **administração autónoma do Estado**. Não está sujeita à superintendência estatal, mas o Estado exerce controlo sobre a **legalidade das suas decisões através dos tribunais administrativos** (Art. 6, nº 3 do Estatuto)."
+      },
+      {
+        "id": 9,
+        "discipline": "Deontologia",
+        "front": "Quem tem competência para decidir em última instância sobre o levantamento do sigilo profissional, segundo o Estatuto?",
+        "back": "Em primeira instância, a decisão compete ao **Presidente do Conselho Regional** respetivo (Art. 55, nº 1, al. l)). O **recurso** dessa decisão é interposto para o **Bastonário** (Art. 40, nº 1, al. o))."
+      },
+      {
+        "id": 10,
+        "discipline": "Deontologia",
+        "front": "Qual a função principal do Conselho de Supervisão, criado em 2024?",
+        "back": "A sua principal função é **zelar pela legalidade da atuação dos órgãos da Ordem**, funcionando como um 'auditor interno', independente dos demais órgãos. É composto maioritariamente por **membros externos à Ordem**. Também aprova o regulamento de estágio."
+      },
+      {
+        "id": 11,
+        "discipline": "Deontologia",
+        "front": "Onde deve ser apresentada uma participação disciplinar contra um colega advogado?",
+        "back": "Deve ser apresentada no **Conselho de Deontologia da região onde o colega se encontra inscrito**, e não no local da prática do facto (Art. 58, nº 1, al. a))."
+      },
+      {
+        "id": 12,
+        "discipline": "Deontologia",
+        "front": "Quais são os únicos temas que o referendo da Ordem dos Advogados não pode abordar?",
+        "back": "O referendo **exclui apenas as questões disciplinares ou financeiras** (Art. 26, nº 1 do Estatuto). Pode abordar todos os outros temas da competência da Assembleia Geral, do Bastonário ou do Conselho Geral."
+      },
+      {
+        "id": 13,
+        "discipline": "Deontologia",
+        "front": "Qual é o ato próprio exclusivo por excelência dos advogados e solicitadores, segundo a nova lei?",
+        "back": "O **mandato forense**, que é a representação perante qualquer jurisdição, autoridade ou entidade, pública ou privada (Art. 67 do Estatuto; Art. 5 da Lei dos Atos Próprios)."
+      },
+      {
+        "id": 14,
+        "discipline": "Deontologia",
+        "front": "Quem mais pode exercer a consulta jurídica, para além dos advogados, após a nova lei dos atos próprios?",
+        "back": "**Notários, agentes de execução e licenciados em direito** (Art. 7 da Lei dos Atos Próprios). Os licenciados em direito devem constituir um seguro de responsabilidade civil profissional."
+      },
+      {
+        "id": 15,
+        "discipline": "Deontologia",
+        "front": "Quais são as consequências da prática de atos próprios de advogado por alguém não habilitado?",
+        "back": "A pessoa comete o **crime de procuradoria ilícita** (Art. 11 da Lei dos Atos Próprios). Também se pune o **auxílio** a essa prática. Este crime pode estar em concurso aparente com o **crime de usurpação de funções** (Art. 358, al. b) do Código Penal)."
+      },
+      {
+        "id": 16,
+        "discipline": "Deontologia",
+        "front": "Qual o domicílio profissional de um advogado estagiário?",
+        "back": "O domicílio profissional do advogado estagiário é **sempre o do patrono** (Art. 186, nº 4)."
+      },
+      {
+        "id": 17,
+        "discipline": "Deontologia",
+        "front": "Em que tipo de ações judiciais um advogado estagiário pode intervir isoladamente, sob orientação do patrono?",
+        "back": "Em ações cujo valor **não exceda a alçada do tribunal de primeira instância (até 5 mil euros)**, tanto em processo civil (Art. 40, nº 1, al. b) à contrário, e Art. 629, nº 1 do CPC) quanto em processo penal (para pedidos de indemnização civil até 5 mil euros)."
+      },
+      {
+        "id": 18,
+        "discipline": "Deontologia",
+        "front": "O que acontece quando um advogado estagiário excede as suas competências?",
+        "back": "Considera-se um **exercício irregular da advocacia**, não um crime de procuradoria ilícita. Gera **responsabilidade disciplinar** para o estagiário (Arts. 114, 115, nº 1) e, eventualmente, para o patrono (Art. 192, nº 5, al. c))."
+      },
+      {
+        "id": 19,
+        "discipline": "Deontologia",
+        "front": "Qual a diferença entre incompatibilidade e impedimento na advocacia?",
+        "back": "A **incompatibilidade** é uma **impossibilidade absoluta de exercício simultâneo** da advocacia com outro cargo/emprego, implicando a suspensão ou impossibilidade de inscrição. O **impedimento** é uma **impossibilidade de praticar determinados atos** enquanto advogado, obrigando a não representar um cliente ou causa específica."
+      },
+      {
+        "id": 20,
+        "discipline": "Deontologia",
+        "front": "Um vereador municipal sem tempo atribuído pode ser advogado? Se sim, com que restrições?",
+        "back": "**Sim, pode ser advogado**, pois não está coberto pela incompatibilidade do Art. 82, nº 1, al. a). No entanto, está **impedido** (Art. 83, nº 5) de intervir em causas contra a sua autarquia ou em atividades do executivo do seu município relacionadas com temas que o afetem."
+      },
+      {
+        "id": 21,
+        "discipline": "Deontologia",
+        "front": "Que deve fazer um advogado perante uma incompatibilidade superveniente?",
+        "back": "Deve **suspender imediatamente o exercício da advocacia** e, no prazo de 30 dias, **suspender a inscrição na Ordem** (Art. 188, nº 4; Art. 91, al. d)). A violação pode levar a processo de averiguação de inidoneidade (Art. 177)."
+      },
+      {
+        "id": 22,
+        "discipline": "Deontologia",
+        "front": "Os impedimentos do advogado (Art. 83) estendem-se aos seus colegas de escritório ou sociedade?",
+        "back": "O Art. 83, nºs 3 e 5, **prevê expressamente essa extensão** para os impedimentos de vereadores sem tempo atribuído e representantes de Assembleias Autárquicas. Nos demais casos, **não há norma expressa para uma extensão automática**, havendo divergência doutrinária."
+      },
+      {
+        "id": 23,
+        "discipline": "Deontologia",
+        "front": "Quais são os dois fundamentos principais da regulação do conflito de interesses na advocacia?",
+        "back": "Os fundamentos são: 1. O **dever de lealdade** na relação advogado-cliente, que impede a representação de interesses antagónicos ou a existência de interesse pessoal na causa. 2. A **proteção do segredo profissional**, para evitar o uso de informações adquiridas para beneficiar outra parte."
+      },
+      {
+        "id": 24,
+        "discipline": "Deontologia",
+        "front": "O que acontece se um conflito de interesses surgir supervenientemente quando o advogado representa mais do que um cliente?",
+        "back": "O advogado **tem de deixar de representar ambos os clientes** (Art. 99, nº 4 do Estatuto). Isto evita que o advogado possa aproveitar informações ou ações realizadas para uma parte em benefício da outra."
+      },
+      {
+        "id": 25,
+        "discipline": "Deontologia",
+        "front": "Quais são as consequências da violação das normas sobre conflito de interesses?",
+        "back": "A violação implica **tripla responsabilidade**: **Disciplinar** (Arts. 114 e 115, nº 1), **Civil** (responsabilidade civil contratual) e **Penal** (crime de prevaricação, Art. 370, nº 2 do Código Penal)."
+      },
+      {
+        "id": 26,
+        "discipline": "Deontologia",
+        "front": "Quais as principais preocupações com a admissão de sociedades multidisciplinares que geraram oposição da Ordem dos Advogados?",
+        "back": "As principais preocupações prendem-se com a garantia dos **deveres deontológicos, da independência, dos conflitos de interesses e do sigilo profissional**, considerando a advocacia como exercício privado de uma função pública."
+      },
+      {
+        "id": 27,
+        "discipline": "Deontologia",
+        "front": "Que sucede a um sócio de uma sociedade multidisciplinar que não possua qualificações profissionais para o exercício de uma das profissões que integra o objeto social da sociedade?",
+        "back": "Esse sócio, mesmo não qualificado para uma das profissões, **fica sujeito aos deveres deontológicos e ao regime disciplinar** da atividade profissional que integra o objeto social da sociedade (Art. 52-C, nº 2 da Lei 53/2015)."
+      },
+      {
+        "id": 28,
+        "discipline": "Deontologia",
+        "front": "Que tipo de sociedades multidisciplinares são explicitamente proibidas ou problemáticas para advogados?",
+        "back": "É problemática e ilegal uma sociedade que envolva a **advocacia e a mediação imobiliária** (pela incompatibilidade do exercício direto da mediação imobiliária com a advocacia), ou uma sociedade entre advogados e solicitadores onde o advogado **exerça o mandato forense** (pela incompatibilidade do Art. 85 do Estatuto)."
+      },
+      {
+        "id": 29,
+        "discipline": "Deontologia",
+        "front": "Em que situações, excecionalmente, é permitida a discussão pública de assuntos profissionais por um advogado?",
+        "back": "1. Mediante **autorização prévia do Presidente do Conselho Regional** (Art. 55, nº 1, al. n)), para exercer o direito de resposta e prevenir ofensas a dignidade, direitos e interesses legítimos. 2. Em **casos de urgência, sem autorização prévia**, mas com **informação posterior** ao Presidente do Conselho Regional, limitada ao estritamente necessário."
+      },
+      {
+        "id": 30,
+        "discipline": "Deontologia",
+        "front": "Qual o objetivo do direito de protesto (Art. 80 do Estatuto) e em que consiste o seu exercício?",
+        "back": "O objetivo é permitir ao advogado **agir quando o magistrado nega a palavra**, especialmente para arguir **nulidades processuais que carecem de invocação imediata**. O advogado deve requerer a ata e, em caso de recusa, exercer o direito de protesto. Se o magistrado persistir na recusa, o advogado deve **suspender os trabalhos, sair da audiência e apresentar o protesto por escrito**."
+      },
+      {
+        "id": 31,
+        "discipline": "Deontologia",
+        "front": "Que responsabilidade pode recair sobre um magistrado que recusa a admissão de um protesto por parte de um advogado?",
+        "back": "A falta de admissão de protesto implica sempre a **responsabilidade disciplinar do magistrado por desobediência à lei**."
+      },
+      {
+        "id": 32,
+        "discipline": "Deontologia",
+        "front": "A vontade ou autorização do cliente é suficiente para levantar o segredo profissional de um advogado?",
+        "back": "**Não**, a vontade ou autorização do cliente é **irrelevante**. O segredo profissional é uma **questão de interesse público** e só pode ser levantado mediante **autorização do Presidente do Conselho Regional** (Art. 92, nº 4 do Estatuto), com recurso para o Bastonário."
+      },
+      {
+        "id": 33,
+        "discipline": "Deontologia",
+        "front": "O que deve fazer um advogado se for chamado a depor sobre factos abrangidos pelo segredo profissional e o tribunal o obrigar a fazê-lo, apesar da sua recusa inicial?",
+        "back": "O advogado enfrenta um dilema: Viola o segredo (sujeito a **responsabilidade tripartida**, incluindo **penal** por violação do segredo, Art. 195 CP) ou mantém a recusa (sujeito a **responsabilidade penal** por desobediência, Art. 360 CP, e multa, Art. 417, nº 2 CPC). Pode alegar **exclusão da ilicitude por conflito de deveres** (Art. 31, al. c) e Art. 36 CP) e o tribunal deve solicitar **parecer à Ordem** (Art. 135 CPP)."
+      },
+      {
+        "id": 34,
+        "discipline": "Deontologia",
+        "front": "Quais as regras aplicáveis às buscas em escritórios de advogados?",
+        "back": "As buscas só podem ser decretadas e dirigidas pelo **juiz de instrução criminal**, com a **presença do delegado da Ordem dos Advogados** (ou outro advogado em caso de urgência). A ausência do juiz gera a **nulidade da diligência** (Art. 75, nº 1 do Estatuto; Art. 177, nº 5 do CPP)."
+      },
+      {
+        "id": 35,
+        "discipline": "Deontologia",
+        "front": "Um advogado pode usar todos os meios para atingir os objetivos do seu cliente, mesmo que envolva fins injustos ou ilícitos?",
+        "back": "**Não**. O advogado deve compatibilizar os interesses do cliente com o valor mais alto da justiça (Art. 90). Não deve usar **meios dilatórios** nem procurar **atingir fins injustos ou ilícitos**, mesmo que seja do interesse do cliente."
+      },
+      {
+        "id": 36,
+        "discipline": "Deontologia",
+        "front": "Quais os deveres do advogado relacionados com a identificação do cliente e a utilização de contas bancárias, no âmbito do combate ao branqueamento de capitais?",
+        "back": "O advogado deve **verificar a identidade do cliente**, exigindo que a procuração para novos clientes seja assinada no escritório ou na sua presença (Art. 90, nº 2, al. c)). Além disso, as suas contas bancárias **não podem ser utilizadas para esconder fundos** de origem ilícita do cliente (Art. 90, nº 2, al. e))."
+      },
+      {
+        "id": 37,
+        "discipline": "Deontologia",
+        "front": "Quais são as principais exigências relativas ao domicílio profissional de um advogado?",
+        "back": "O domicílio profissional deve ser um local **compatível com a dignidade da profissão**, onde seja possível receber clientes e assegurar a **proteção do segredo profissional**. Não pode ser uma caixa postal, devendo ser uma **morada fixa, permanente, em imóvel e em Portugal** (Art. 91, al. h) do Estatuto; Regulamento 5/2025)."
+      },
+      {
+        "id": 38,
+        "discipline": "Deontologia",
+        "front": "O uso da toga é um dever processual ou deontológico?",
+        "back": "É um **dever deontológico** (Art. 74 do Estatuto). Ninguém pode impedir o advogado de estar em juízo por falta de uso da toga, embora o juiz possa comunicar a infração à Ordem (Art. 121)."
+      },
+      {
+        "id": 39,
+        "discipline": "Deontologia",
+        "front": "Um advogado pode aceitar o patrocínio de uma causa mesmo que não tenha competência ou disponibilidade para dela se ocupar devidamente?",
+        "back": "**Não**, o advogado não deve aceitar o patrocínio de uma questão se souber que **não tem competência ou disponibilidade** para dela se ocupar prontamente, com todo o zelo e empenho exigidos (Art. 98, nº 2). Isto relaciona-se com o dever de zelo e empenho (Art. 100, nº 1, al. b))."
+      },
+      {
+        "id": 40,
+        "discipline": "Deontologia",
+        "front": "Quais são as três principais obrigações do advogado para com o cliente, previstas no artigo 100, número 1, alínea a) do Estatuto?",
+        "back": "1. Dar uma **opinião conscienciosa, honesta e independente** sobre a viabilidade do tema. 2. Prestar **acompanhamento** sobre o andamento das questões, explicando em termos compreensíveis. 3. Prestar **informações sobre os critérios de honorários, estimativa e a possibilidade de apoio judiciário**."
+      },
+      {
+        "id": 41,
+        "discipline": "Deontologia",
+        "front": "Em que condições pode um advogado cessar o seu mandato?",
+        "back": "O advogado só pode cessar o mandato com **justa causa** (normalmente quebra de confiança). Mesmo com justa causa, deve fazê-lo em **tempo e modo útil**, de forma a permitir ao cliente assegurar a assistência por outro advogado (Art. 100, nº 1, al. e) e nº 2)."
+      },
+      {
+        "id": 42,
+        "discipline": "Deontologia",
+        "front": "Um advogado pode aceitar do seu cliente valores ou bens que sejam objeto de crime?",
+        "back": "**Não**, o advogado **não pode aceitar**, sob pena de cometer um **crime de favorecimento pessoal** (Art. 367 do Código Penal)."
+      },
+      {
+        "id": 43,
+        "discipline": "Deontologia",
+        "front": "Que direito tem o advogado para garantir o pagamento dos seus honorários e despesas, e quais são as suas limitações?",
+        "back": "O advogado goza do **direito de retenção** sobre os bens do cliente para garantir o pagamento de honorários e despesas não cobertas por provisões (Art. 101, nº 3). No entanto, este direito é excecionado se os documentos forem necessários para a prova do cliente, causarem prejuízos irreparáveis, ou se o cliente prestar caução. **Não implica um direito de autopagamento**."
+      },
+      {
+        "id": 44,
+        "discipline": "Deontologia",
+        "front": "Em que consiste a proibição da *quota litis* e quais as suas exceções?",
+        "back": "A *quota litis* é um acordo onde o direito a receber honorários fica **exclusivamente dependente do resultado obtido** (Art. 106). É proibida para salvaguardar a **independência e integridade** do advogado. As exceções permitidas são: 1. **Fixação prévia de honorários em função do valor da causa** (Art. 106, nº 3, al. a)); 2. **Majoração dos honorários em função do resultado (*success fee*)**, desde que não seja a única forma de remuneração (Art. 106, nº 3, al. b))."
+      },
+      {
+        "id": 45,
+        "discipline": "Deontologia",
+        "front": "O que é proibido a um advogado na sua relação com as testemunhas de uma causa?",
+        "back": "É **completamente vedado ao advogado tentar por qualquer meio influenciar o depoimento de uma testemunha** (Art. 109). O mero contacto para perceber o que ela sabe é admissível, mas a instrução ou influência não são."
+      },
+      {
+        "id": 46,
+        "discipline": "Deontologia",
+        "front": "Que dever tem um advogado em relação ao seu cliente, no que diz respeito à correção e urbanidade para com o tribunal e a contraparte?",
+        "back": "O advogado tem o dever de **controlar o seu cliente**, evitando que este exerça represálias ou seja descortês/desurbano com a contraparte, o tribunal, testemunhas, etc. (Art. 110, nº 2). O advogado deve assegurar que o seu cliente também é correto."
+      },
+      {
+        "id": 47,
+        "discipline": "Deontologia",
+        "front": "Qual a regra geral para um advogado que pretende instaurar um procedimento disciplinar ou judicial contra um colega?",
+        "back": "O advogado tem o dever de **comunicar por escrito ao colega antes de intentar o procedimento**, explicando os respetivos motivos (Art. 96). Uma comunicação oral em audiência não é suficiente."
+      },
+      {
+        "id": 48,
+        "discipline": "Deontologia",
+        "front": "O que deve fazer um advogado sucessor em relação aos honorários do colega que o antecedeu?",
+        "back": "O advogado sucessor deve **diligenciar no sentido de garantir que os honorários do colega que o antecedeu estão assegurados** antes de assumir a causa (Art. 112, nº 2). Isto decorre do dever de solidariedade entre advogados."
+      }
+      {
+        "id": 49,
+        "discipline": "Processo Civil",
+        "front": "Quais são os principais articulados que compõem o processo civil?",
+        "back": "Os principais articulados são a petição inicial, a contestação, a reconvenção, a réplica e os articulados supervenientes [1]."
+      },
+      {
+        "id": 50,
+        "discipline": "Processo Civil",
+        "front": "Qual é a peça processual que dá início à ação e o que deve conter?",
+        "back": "A **petição inicial** é a peça processual que dá início à ação, e é nela que o autor expõe a sua causa de pedir e o seu pedido (ou pedidos) contra um ou vários réus [2]."
+      },
+      {
+        "id": 51,
+        "discipline": "Processo Civil",
+        "front": "Quais são os requisitos essenciais de identificação das partes numa petição inicial?",
+        "back": "É necessário identificar o nome da parte, o seu domicílio (ou sede), o número de identificação fiscal, a profissão e o local de trabalho. Esta informação é obrigatória para o autor e, sempre que possível, para as demais partes [3]."
+      },
+      {
+        "id": 52,
+        "discipline": "Processo Civil",
+        "front": "Qual a diferença entre a recusa da petição inicial e a ineptidão da petição inicial?",
+        "back": "A **recusa da petição inicial** é feita pela secretaria por incumprimento de requisitos formais óbvios (ex: falta de indicação da forma ou valor do processo) [4]. A **ineptidão da petição inicial** é decidida pelo juiz e exige um juízo de direito, ocorrendo por falta ou ininteligibilidade do pedido/causa de pedir, contradição entre eles, ou cumulação de pedidos/causas de pedir incompatíveis [5, 6]."
+      },
+      {
+        "id": 53,
+        "discipline": "Processo Civil",
+        "front": "O que é a contestação e de que formas o réu pode exercer a sua defesa?",
+        "back": "A contestação é a peça processual na qual o réu oferece a sua defesa. Essa defesa pode ser exercida **por impugnação** (contradição de factos ou negação do efeito jurídico) ou **por exceção** (factos que obstam ao conhecimento do mérito ou que servem de causa impeditiva, modificativa ou extintiva do direito) [7-9]."
+      },
+      {
+        "id": 54,
+        "discipline": "Processo Civil",
+        "front": "O que é o ónus de impugnação motivada e qual a sua consequência principal?",
+        "back": "O ónus de **impugnação motivada** (Art. 574, n.º 1 CPC) exige que o réu tome uma posição definida perante os factos da causa de pedir. Se os factos não forem impugnados, **consideram-se admitidos por acordo**, salvo exceções [10, 11]."
+      },
+      {
+        "id": 55,
+        "discipline": "Processo Civil",
+        "front": "Diferencie exceções dilatórias de exceções perentórias.",
+        "back": "As **exceções dilatórias** (Art. 577 CPC) obstam ao conhecimento do mérito da causa e são, regra geral, de conhecimento oficioso. As **exceções perentórias** (Art. 579 CPC) determinam a improcedência total ou parcial do pedido, podendo ser extintivas, impeditivas ou modificativas do direito invocado, e regra geral, têm de ser invocadas pelas partes [8, 9, 11, 12]."
+      },
+      {
+        "id": 56,
+        "discipline": "Processo Civil",
+        "front": "O que são a revelia absoluta e a revelia relativa do réu?",
+        "back": "A **revelia absoluta** (Art. 566 CPC) ocorre quando o réu não deduz oposição, não constitui mandatário nem intervém no processo. A **revelia relativa** (Art. 567 CPC) ocorre quando o réu não contesta, mas foi regularmente citado na sua pessoa ou constituiu mandatário judicial no prazo para contestar [13, 14]."
+      },
+      {
+        "id": 57,
+        "discipline": "Processo Civil",
+        "front": "Qual a principal consequência da revelia relativa operante?",
+        "back": "Na revelia relativa operante, **consideram-se confessados os factos alegados pelo autor** (ficta confessio), a menos que se apliquem as exceções do Art. 568 do CPC que tornam a revelia inoperante [15, 16]."
+      },
+      {
+        "id": 58,
+        "discipline": "Processo Civil",
+        "front": "O que é a reconvenção e qual a sua relação com a contestação?",
+        "back": "A **reconvenção** é a peça processual na qual o réu deduz um ou mais pedidos contra o autor (Art. 583, n.º 1 CPC). Enquanto na contestação o réu se defende, na reconvenção ele 'contra-ataca' com um pedido autónomo. É deduzida no mesmo articulado da contestação, mas numa secção à parte [17, 18]."
+      },
+      {
+        "id": 59,
+        "discipline": "Processo Civil",
+        "front": "Quando é que a réplica é admissível?",
+        "back": "A **réplica** (Art. 584 CPC) apenas poderá existir caso haja reconvenção. Nas ações de simples apreciação negativa, serve para impugnar factos constitutivos alegados pelo réu e para alegar factos impeditivos ou extintivos dos direitos invocados pelo réu [19]."
+      },
+      {
+        "id": 60,
+        "discipline": "Processo Civil",
+        "front": "Qual a principal função dos articulados supervenientes?",
+        "back": "Os **articulados supervenientes** servem para apresentar factos constitutivos, modificativos ou extintivos do direito que forem supervenientes (objetiva ou subjetivamente), devendo ser apresentados pela parte a quem aproveitem até ao encerramento da discussão [20, 21]."
+      },
+      {
+        "id": 61,
+        "discipline": "Processo Civil",
+        "front": "Qual a finalidade do despacho pré-saneador e quando pode ser proferido?",
+        "back": "Finda a fase dos articulados, o juiz pode proferir um **despacho pré-saneador** (Art. 590 CPC) para indeferimento liminar da petição inicial, suprimento de exceções dilatórias, convite ao aperfeiçoamento dos articulados ou junção de documentos [22-25]."
+      },
+      {
+        "id": 62,
+        "discipline": "Processo Civil",
+        "front": "Quais são as principais finalidades da audiência prévia?",
+        "back": "As finalidades da **audiência prévia** (Art. 591 CPC) incluem: tentativa de conciliação, discussão de facto e de direito sobre exceções dilatórias ou para conhecimento imediato do mérito, resposta a exceções, delimitação do objeto do litígio, prolação do despacho saneador e programação da audiência final [26-32]."
+      },
+      {
+        "id": 63,
+        "discipline": "Processo Civil",
+        "front": "Quando é que a audiência prévia não se realiza ou pode ser dispensada?",
+        "back": "A audiência prévia **não se realiza** em ações não contestadas que prossigam nos termos do Art. 568 b) a d) CPC, ou quando o processo finda com despacho saneador por procedência de exceções dilatórias já debatidas (Art. 592 CPC) [33, 34]. Pode ser **dispensada** em ações superiores a 15.000€ ou em ações inferiores a 15.000€ por desnecessidade ou inadequação (Art. 593 e 597 CPC) [35, 36]."
+      },
+      {
+        "id": 64,
+        "discipline": "Processo Civil",
+        "front": "Qual a sequência da audiência final?",
+        "back": "A audiência final (Art. 604 CPC) segue a sequência de: tentativa de conciliação, depoimentos de parte, exibição de reproduções (cinematográficas/fonográficas), esclarecimentos verbais dos peritos, inquirição de testemunhas e alegações orais [37, 38]."
+      },
+      {
+        "id": 65,
+        "discipline": "Processo Civil",
+        "front": "Quais são os elementos essenciais que devem constar numa sentença?",
+        "back": "A sentença deve conter: identificação das partes e do objeto do litígio, indicação dos factos provados e não provados, aplicação das normas jurídicas correspondentes, e condenação das partes em custas [39, 40]."
+      },
+      {
+        "id": 66,
+        "discipline": "Processo Civil",
+        "front": "Quando ocorre o esgotamento do poder jurisdicional do juiz e quais as exceções?",
+        "back": "O poder jurisdicional do juiz **esgota-se** com a prolação da sentença (Art. 613, n.º 1 CPC). As exceções permitem ao juiz voltar a pronunciar-se em casos de erros materiais, suprimento de nulidades e reforma da sentença [41, 42]."
+      },
+      {
+        "id": 67,
+        "discipline": "Processo Civil",
+        "front": "Quais as causas de nulidade da sentença (Art. 615 CPC)?",
+        "back": "A sentença é nula se: não contiver a assinatura do juiz; não especificar os fundamentos de facto e direito; os fundamentos estiverem em oposição com a decisão; for obscura ou ambígua; o juiz deixe de se pronunciar sobre questões que devesse apreciar (omissão de pronúncia); ou conheça de questões que não poderia tomar conhecimento (excesso de pronúncia); ou condene em quantidade superior ou objeto diverso do pedido [43]."
+      },
+      {
+        "id": 68,
+        "discipline": "Processo Civil",
+        "front": "Diferencie litispendência de caso julgado.",
+        "back": "Ambos exigem a tríplice identidade (sujeitos, pedido, causa de pedir - Art. 581 CPC). Na **litispendência**, a ação primeiramente começada ainda está em curso. No **caso julgado**, a ação primeiramente começada já foi decidida por decisão que não admite recurso ordinário [44]."
+      },
+      {
+        "id": 69,
+        "discipline": "Processo Civil",
+        "front": "O que é a citação e quando é utilizada?",
+        "back": "A **citação** é o ato processual que dá conhecimento ao réu de que foi proposta uma ação contra ele, ou para chamar pela primeira vez ao processo alguma pessoa interessada na causa. É a primeira e única vez que uma parte é chamada ao processo desta forma [45, 46]."
+      },
+      {
+        "id": 70,
+        "discipline": "Processo Civil",
+        "front": "Quando se considera a citação efetuada no caso de citação postal?",
+        "back": "Regra geral, a citação postal considera-se efetuada **no dia da assinatura do aviso de receção ou da recusa em recebê-lo** (Art. 230, n.º 1 CPC). Nalguns casos específicos, considera-se efetuada no oitavo dia posterior ao do aviso [47]."
+      },
+      {
+        "id": 71,
+        "discipline": "Processo Civil",
+        "front": "Quando se presume efetuada uma notificação eletrónica?",
+        "back": "A **notificação** presume-se efetuada no **terceiro dia posterior ao do envio** ou no primeiro dia útil imediatamente seguinte, quando não o seja. A contagem inicia-se a partir da data da certificação em sistema Citius [48, 49]."
+      },
+      {
+        "id": 72,
+        "discipline": "Processo Civil",
+        "front": "Quais as regras gerais para a contagem dos prazos processuais?",
+        "back": "1. **Início**: Nunca se inclui o dia do evento [50]. 2. **Fim**: Termina sempre num dia útil, transferindo-se para o 1.º dia útil seguinte se cair em fim de semana ou feriado [51]. 3. **Continuidade**: Os prazos são contínuos e incluem sábados, domingos e feriados [52]. 4. **Suspensão**: Os prazos suspendem-se durante as férias judiciais, exceto em prazos superiores a 6 meses ou processos urgentes [53]."
+      },
+      {
+        "id": 73,
+        "discipline": "Processo Civil",
+        "front": "Qual o prazo geral para contestar e para replicar, e qual o prazo supletivo?",
+        "back": "O prazo para **contestar** é de 30 dias (Art. 569, n.º 1 CPC) [54]. O prazo para a **réplica** é de 30 dias (Art. 585 CPC) [54]. O prazo **geral supletivo** é de 10 dias (Art. 149, n.º 1 CPC) [55]."
+      },
+      {
+        "id": 74,
+        "discipline": "Processo Civil",
+        "front": "Qual a regra especial para o prazo de defesa com pluralidade de réus?",
+        "back": "Quando há pluralidade de réus e os prazos de defesa terminam em dias diferentes, a contestação de todos ou de cada um pode ser oferecida **até ao termo do prazo que começou a correr em último lugar** (Art. 569, n.º 2 CPC) [56]."
+      },
+      {
+        "id": 75,
+        "discipline": "Processo Civil",
+        "front": "Qual o limite das dilações em procedimentos cautelares?",
+        "back": "Em procedimentos cautelares, a **dilação não pode ser superior a 10 dias**, mesmo que as regras gerais prevejam um período mais longo (Art. 366, n.º 3 CPC) [57-59]."
+      },
+      {
+        "id": 76,
+        "discipline": "Processo Civil",
+        "front": "O que acontece se um ato processual for praticado fora do prazo, mas nos 3 dias úteis seguintes?",
+        "back": "É possível praticar o ato, mas sujeito ao **pagamento de uma multa**, que será tanto maior quantos mais dias forem utilizados (Art. 139, n.º 5 CPC) [60-62]."
+      },
+      {
+        "id": 77,
+        "discipline": "Processo Civil",
+        "front": "O que é personalidade judiciária e qual a sua regra geral?",
+        "back": "A **personalidade judiciária** é a suscetibilidade de ser parte em juízo (Art. 11, n.º 1 CPC). A regra geral é que **quem tem personalidade jurídica tem igualmente personalidade judiciária** (Art. 11, n.º 2 CPC) [63, 64]."
+      },
+      {
+        "id": 78,
+        "discipline": "Processo Civil",
+        "front": "Mencione três entidades que têm personalidade judiciária sem ter personalidade jurídica.",
+        "back": "A herança jacente, as associações sem personalidade jurídica e as sociedades civis (Art. 12 CPC) [65]."
+      },
+      {
+        "id": 79,
+        "discipline": "Processo Civil",
+        "front": "O que é capacidade judiciária?",
+        "back": "A **capacidade judiciária** consiste na suscetibilidade de estar, por si, em juízo (Art. 15, n.º 1 CPC) [66, 67]."
+      },
+      {
+        "id": 80,
+        "discipline": "Processo Civil",
+        "front": "O que é legitimidade processual ativa e passiva?",
+        "back": "O autor é **parte legítima** quando tem interesse direto em demandar, e o réu será **parte legítima** quando tem interesse direto em contradizer (Art. 30, n.º 1 CPC) [68]."
+      },
+      {
+        "id": 81,
+        "discipline": "Processo Civil",
+        "front": "Qual a diferença fundamental entre litisconsórcio e coligação?",
+        "back": "No **litisconsórcio**, existe pluralidade de partes e unidade quanto ao pedido. Na **coligação**, existe pluralidade de partes e pluralidade de pedidos [69, 70]."
+      },
+      {
+        "id": 82,
+        "discipline": "Processo Civil",
+        "front": "Quais as consequências da preterição de litisconsórcio necessário?",
+        "back": "A preterição de litisconsórcio necessário conduz a uma exceção de **ilegitimidade** (Art. 33 CPC), que pode ser sanada através de intervenção espontânea ou provocada [71-73]."
+      },
+      {
+        "id": 83,
+        "discipline": "Processo Civil",
+        "front": "Em que casos é obrigatória a constituição de advogado?",
+        "back": "É obrigatória a constituição de advogado em: 1. Causas de competência de tribunais com alçada em que seja admissível recurso ordinário (valor > 5.000€ ou > 2.500€ em Julgados de Paz). 2. Causas em que é sempre admissível recurso (Art. 629, n.ºs 2 e 3 CPC). 3. Recurso e causas propostas nos tribunais superiores (Art. 40 CPC) [74]."
+      },
+      {
+        "id": 84,
+        "discipline": "Processo Civil",
+        "front": "Quais os tipos de competência interna dos tribunais?",
+        "back": "A competência interna afere-se em razão da **matéria**, do **valor**, da **hierarquia** e do **território** [75]."
+      },
+      {
+        "id": 85,
+        "discipline": "Processo Civil",
+        "front": "Qual o critério para a competência em razão do valor em instâncias centrais e locais?",
+        "back": "Se o valor da causa for **superior a 50.000€**, a causa deverá ser decidida pela **instância central**. Se o valor for **inferior a 50.000€**, a causa será decidida pela **instância local**, salvo atribuição a juízos de competência especializada ou a tribunal de competência alargada [76]."
+      },
+      {
+        "id": 86,
+        "discipline": "Processo Civil",
+        "front": "Quais são os valores das alçadas dos tribunais de 1.ª instância e da Relação?",
+        "back": "Os tribunais de **1.ª instância** têm uma alçada de **5.000€**. Os tribunais da **Relação** têm uma alçada de **30.000€** [77]."
+      },
+      {
+        "id": 87,
+        "discipline": "Processo Civil",
+        "front": "Quando ocorre incompetência absoluta do tribunal?",
+        "back": "Ocorre incompetência absoluta (Art. 96 CPC) em caso de infração de regras em razão da **matéria**, em razão da **hierarquia**, infração de regras de **competência internacional**, ou **preterição de tribunal arbitral** [78]."
+      },
+      {
+        "id": 88,
+        "discipline": "Processo Civil",
+        "front": "Qual o efeito da declaração de incompetência relativa?",
+        "back": "O efeito da declaração de incompetência relativa (Art. 102 CPC) é a **remessa do processo para o tribunal competente**, e não a absolvição da instância [79]."
+      },
+      {
+        "id": 89,
+        "discipline": "Processo Civil",
+        "front": "Em que situações a instância pode ser suspensa?",
+        "back": "A instância pode ser suspensa por: falecimento ou extinção da parte; falecimento ou impedimento do mandatário; determinação do juiz ou acordo das partes (máx. 3 meses); quando a decisão da causa depende do julgamento de outra ação já proposta (causa prejudicial); e em outros casos previstos na lei (Art. 269, 270, 271, 272 CPC) [80, 81]."
+      },
+      {
+        "id": 90,
+        "discipline": "Processo Civil",
+        "front": "Diferencie desistência do pedido de desistência da instância.",
+        "back": "A **desistência do pedido** extingue o direito do autor, impedindo nova ação com o mesmo objeto (caso julgado material) [82]. A **desistência da instância** apenas faz cessar o processo instaurado, sendo possível iniciar um novo processo com idêntico objeto (caso julgado formal) [82]."
+      },
+      {
+        "id": 91,
+        "discipline": "Processo Civil",
+        "front": "Qual o critério para fixação do valor da causa em pedidos alternativos ou subsidiários?",
+        "back": "Em **pedidos alternativos**, atende-se sempre ao pedido de **maior valor**. Em **pedidos subsidiários**, atender-se-á ao pedido formulado em **primeiro lugar** [83]."
+      },
+      {
+        "id": 92,
+        "discipline": "Processo Civil",
+        "front": "Quais os três requisitos principais das providências cautelares?",
+        "back": "Os três requisitos são: **fumus boni iuris** (probabilidade séria da existência do direito), **periculum in mora** (fundado receio de lesão grave e dificilmente reparável), e **proporcionalidade** (ponderação entre as medidas e os interesses a proteger) [84]."
+      },
+      {
+        "id": 93,
+        "discipline": "Processo Civil",
+        "front": "Mencione três causas de caducidade de uma providência cautelar.",
+        "back": "Uma providência cautelar caduca se: o requerente não propuser a ação principal em 30 dias; a ação for julgada improcedente por decisão transitada em julgado; ou o direito acautelado se extinguir (Art. 373, n.º 1 CPC) [85]."
+      },
+      {
+        "id": 94,
+        "discipline": "Processo Civil",
+        "front": "O que é a inversão do contencioso e quais os seus requisitos?",
+        "back": "A **inversão do contencioso** permite que a providência cautelar substitua a decisão final, dispensando a ação principal. Requisitos (Art. 369 CPC): requerimento da parte; natureza da providência adequada à composição definitiva do litígio; matéria adquirida no procedimento cautelar que permita convicção segura sobre a existência do direito [86, 87]."
+      },
+      {
+        "id": 95,
+        "discipline": "Processo Civil",
+        "front": "Qual a diferença entre Arresto e Arrolamento?",
+        "back": "O **arresto** visa garantir o pagamento de dívidas do credor, mantendo bens na titularidade do devedor contra dissipação (foco no crédito) [88]. O **arrolamento** visa a descrição, avaliação e depósito de bens, devido a justo receio de extravio/dissipação, para conservação (foco nos bens) [89]."
+      },
+      {
+        "id": 96,
+        "discipline": "Processo Civil",
+        "front": "Quando podem ser apresentados documentos em 1.ª instância?",
+        "back": "Devem ser apresentados com o articulado em que se alegam os factos correspondentes. Se não o forem, podem sê-lo até 20 dias antes da audiência final (com multa), ou posteriormente se a junção se tornar necessária por ocorrência posterior ou impossibilidade anterior [90]."
+      },
+      {
+        "id": 97,
+        "discipline": "Processo Civil",
+        "front": "Diferencie depoimento de parte de declarações de parte.",
+        "back": "O **depoimento de parte** destina-se a provocar a confissão, a iniciativa é do juiz ou da parte contrária [91]. As **declarações de parte** incidem sobre factos favoráveis ou desfavoráveis de conhecimento direto, a iniciativa é da própria parte e não visa primariamente a confissão [91, 92]."
+      },
+      {
+        "id": 98,
+        "discipline": "Processo Civil",
+        "front": "Qual a principal diferença entre recursos ordinários e extraordinários?",
+        "back": "Nos **recursos ordinários**, a decisão final ainda não transitou em julgado. Nos **recursos extraordinários**, a decisão já transitou em julgado [93, 94]."
+      }
+    
+];
+
 // --- AUTHENTICATION & PROXY LOGIC ---
 const checkAuth = async (req, res, next) => {
-    console.log("--- [AUTH] checkAuth middleware initiated. ---");
+    // Enhanced Logging: No longer needed for production, but kept for reference
+    // console.log("--- [AUTH] checkAuth middleware initiated. ---");
 
     if (!req.headers.cookie) {
-        console.log("[AUTH-FAIL] Request received with no cookies. Denying access.");
         return res.status(401).send('No cookies provided for authentication.');
     }
     
-    console.log("[AUTH] Cookies received. Attempting to validate with Learnworlds API.");
-
     try {
         const learnworldsApiUrl = `${LEARNWORLDS_SCHOOL_URL}/api/v2/users/me`;
-        console.log(`[AUTH] Making proxy request to: ${learnworldsApiUrl}`);
-
         const response = await axios.get(learnworldsApiUrl, {
             headers: { 
                 'Cookie': req.headers.cookie,
@@ -137,37 +726,30 @@ const checkAuth = async (req, res, next) => {
         });
         
         if (response.status === 200) {
-            console.log("[AUTH-SUCCESS] Learnworlds API returned status 200. User is authenticated.");
             req.user = response.data; 
             return next(); 
         }
 
-        console.log(`[AUTH-FAIL] Learnworlds API returned an unexpected status: ${response.status}. Denying access.`);
         res.status(401).send('Authentication check failed with unexpected status.');
 
     } catch (error) {
-        console.error("[AUTH-ERROR] Error during authentication proxy request to Learnworlds.");
         if (error.response) {
-            console.error(`[AUTH-ERROR] Status: ${error.response.status}`);
-            console.error(`[AUTH-ERROR] Data:`, error.response.data);
             return res.status(error.response.status).send('User not authenticated by Learnworlds.');
         } else if (error.request) {
-            console.error("[AUTH-ERROR] No response received from Learnworlds API.");
             return res.status(504).send('Gateway Timeout: No response from authentication server.');
         } else {
-            console.error('[AUTH-ERROR] Error setting up the request:', error.message);
             return res.status(500).send('Internal Server Error while preparing auth request.');
         }
     }
 };
 
-
 // --- API ROUTES ---
-app.get('/api/quiz-data', checkAuth, (req, res) => {
-    console.log("[API] /api/quiz-data route hit successfully after auth.");
-    res.json(allQuestions);
+app.get('/api/data', checkAuth, (req, res) => {
+    res.json({
+        questions: allQuestions,
+        flashcards: allFlashcards
+    });
 });
-
 
 // --- SERVER START ---
 app.listen(PORT, () => {

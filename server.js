@@ -403,7 +403,7 @@ const allFlashcards = [
         "discipline": "Deontologia",
         "front": "O que deve fazer um advogado sucessor em relação aos honorários do colega que o antecedeu?",
         "back": "O advogado sucessor deve **diligenciar no sentido de garantir que os honorários do colega que o antecedeu estão assegurados** antes de assumir a causa (Art. 112, nº 2). Isto decorre do dever de solidariedade entre advogados."
-      }
+      },
       {
         "id": 49,
         "discipline": "Processo Civil",
@@ -719,8 +719,8 @@ const checkAuth = async (req, res, next) => {
     try {
         const learnworldsApiUrl = `${LEARNWORLDS_SCHOOL_URL}/api/v2/users/me`;
         const response = await axios.get(learnworldsApiUrl, {
-            headers: { 
-                'Cookie': req.headers.cookie,
+            headers: {
+                'Cookie': req.headers.cookie, 
                 'Lw-Client': LEARNWORLDS_CLIENT_ID
             }
         });

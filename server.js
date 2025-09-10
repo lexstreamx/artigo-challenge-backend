@@ -408,301 +408,301 @@ const allFlashcards = [
         "id": 49,
         "discipline": "Processo Civil",
         "front": "Quais são os principais articulados que compõem o processo civil?",
-        "back": "Os principais articulados são a petição inicial, a contestação, a reconvenção, a réplica e os articulados supervenientes [1]."
+        "back": "Os principais articulados são a petição inicial, a contestação, a reconvenção, a réplica e os articulados supervenientes."
       },
       {
         "id": 50,
         "discipline": "Processo Civil",
         "front": "Qual é a peça processual que dá início à ação e o que deve conter?",
-        "back": "A **petição inicial** é a peça processual que dá início à ação, e é nela que o autor expõe a sua causa de pedir e o seu pedido (ou pedidos) contra um ou vários réus [2]."
+        "back": "A **petição inicial** é a peça processual que dá início à ação, e é nela que o autor expõe a sua causa de pedir e o seu pedido (ou pedidos) contra um ou vários réus"."
       },
       {
         "id": 51,
         "discipline": "Processo Civil",
         "front": "Quais são os requisitos essenciais de identificação das partes numa petição inicial?",
-        "back": "É necessário identificar o nome da parte, o seu domicílio (ou sede), o número de identificação fiscal, a profissão e o local de trabalho. Esta informação é obrigatória para o autor e, sempre que possível, para as demais partes [3]."
+        "back": "É necessário identificar o nome da parte, o seu domicílio (ou sede), o número de identificação fiscal, a profissão e o local de trabalho. Esta informação é obrigatória para o autor e, sempre que possível, para as demais partes"."
       },
       {
         "id": 52,
         "discipline": "Processo Civil",
         "front": "Qual a diferença entre a recusa da petição inicial e a ineptidão da petição inicial?",
-        "back": "A **recusa da petição inicial** é feita pela secretaria por incumprimento de requisitos formais óbvios (ex: falta de indicação da forma ou valor do processo) [4]. A **ineptidão da petição inicial** é decidida pelo juiz e exige um juízo de direito, ocorrendo por falta ou ininteligibilidade do pedido/causa de pedir, contradição entre eles, ou cumulação de pedidos/causas de pedir incompatíveis [5, 6]."
+        "back": "A **recusa da petição inicial** é feita pela secretaria por incumprimento de requisitos formais óbvios (ex: falta de indicação da forma ou valor do processo). A **ineptidão da petição inicial** é decidida pelo juiz e exige um juízo de direito, ocorrendo por falta ou ininteligibilidade do pedido/causa de pedir, contradição entre eles, ou cumulação de pedidos/causas de pedir incompatíveis."
       },
       {
         "id": 53,
         "discipline": "Processo Civil",
         "front": "O que é a contestação e de que formas o réu pode exercer a sua defesa?",
-        "back": "A contestação é a peça processual na qual o réu oferece a sua defesa. Essa defesa pode ser exercida **por impugnação** (contradição de factos ou negação do efeito jurídico) ou **por exceção** (factos que obstam ao conhecimento do mérito ou que servem de causa impeditiva, modificativa ou extintiva do direito) [7-9]."
+        "back": "A contestação é a peça processual na qual o réu oferece a sua defesa. Essa defesa pode ser exercida **por impugnação** (contradição de factos ou negação do efeito jurídico) ou **por exceção** (factos que obstam ao conhecimento do mérito ou que servem de causa impeditiva, modificativa ou extintiva do direito)."
       },
       {
         "id": 54,
         "discipline": "Processo Civil",
         "front": "O que é o ónus de impugnação motivada e qual a sua consequência principal?",
-        "back": "O ónus de **impugnação motivada** (Art. 574, n.º 1 CPC) exige que o réu tome uma posição definida perante os factos da causa de pedir. Se os factos não forem impugnados, **consideram-se admitidos por acordo**, salvo exceções [10, 11]."
+        "back": "O ónus de **impugnação motivada** (Art. 574, n.º 1 CPC) exige que o réu tome uma posição definida perante os factos da causa de pedir. Se os factos não forem impugnados, **consideram-se admitidos por acordo**, salvo exceções"."
       },
       {
         "id": 55,
         "discipline": "Processo Civil",
         "front": "Diferencie exceções dilatórias de exceções perentórias.",
-        "back": "As **exceções dilatórias** (Art. 577 CPC) obstam ao conhecimento do mérito da causa e são, regra geral, de conhecimento oficioso. As **exceções perentórias** (Art. 579 CPC) determinam a improcedência total ou parcial do pedido, podendo ser extintivas, impeditivas ou modificativas do direito invocado, e regra geral, têm de ser invocadas pelas partes [8, 9, 11, 12]."
+        "back": "As **exceções dilatórias** (Art. 577 CPC) obstam ao conhecimento do mérito da causa e são, regra geral, de conhecimento oficioso. As **exceções perentórias** (Art. 579 CPC) determinam a improcedência total ou parcial do pedido, podendo ser extintivas, impeditivas ou modificativas do direito invocado, e regra geral, têm de ser invocadas pelas partes"."
       },
       {
         "id": 56,
         "discipline": "Processo Civil",
         "front": "O que são a revelia absoluta e a revelia relativa do réu?",
-        "back": "A **revelia absoluta** (Art. 566 CPC) ocorre quando o réu não deduz oposição, não constitui mandatário nem intervém no processo. A **revelia relativa** (Art. 567 CPC) ocorre quando o réu não contesta, mas foi regularmente citado na sua pessoa ou constituiu mandatário judicial no prazo para contestar [13, 14]."
+        "back": "A **revelia absoluta** (Art. 566 CPC) ocorre quando o réu não deduz oposição, não constitui mandatário nem intervém no processo. A **revelia relativa** (Art. 567 CPC) ocorre quando o réu não contesta, mas foi regularmente citado na sua pessoa ou constituiu mandatário judicial no prazo para contestar"."
       },
       {
         "id": 57,
         "discipline": "Processo Civil",
         "front": "Qual a principal consequência da revelia relativa operante?",
-        "back": "Na revelia relativa operante, **consideram-se confessados os factos alegados pelo autor** (ficta confessio), a menos que se apliquem as exceções do Art. 568 do CPC que tornam a revelia inoperante [15, 16]."
+        "back": "Na revelia relativa operante, **consideram-se confessados os factos alegados pelo autor** (ficta confessio), a menos que se apliquem as exceções do Art. 568 do CPC que tornam a revelia inoperante"."
       },
       {
         "id": 58,
         "discipline": "Processo Civil",
         "front": "O que é a reconvenção e qual a sua relação com a contestação?",
-        "back": "A **reconvenção** é a peça processual na qual o réu deduz um ou mais pedidos contra o autor (Art. 583, n.º 1 CPC). Enquanto na contestação o réu se defende, na reconvenção ele 'contra-ataca' com um pedido autónomo. É deduzida no mesmo articulado da contestação, mas numa secção à parte [17, 18]."
+        "back": "A **reconvenção** é a peça processual na qual o réu deduz um ou mais pedidos contra o autor (Art. 583, n.º 1 CPC). Enquanto na contestação o réu se defende, na reconvenção ele 'contra-ataca' com um pedido autónomo. É deduzida no mesmo articulado da contestação, mas numa secção à parte"."
       },
       {
         "id": 59,
         "discipline": "Processo Civil",
         "front": "Quando é que a réplica é admissível?",
-        "back": "A **réplica** (Art. 584 CPC) apenas poderá existir caso haja reconvenção. Nas ações de simples apreciação negativa, serve para impugnar factos constitutivos alegados pelo réu e para alegar factos impeditivos ou extintivos dos direitos invocados pelo réu [19]."
+        "back": "A **réplica** (Art. 584 CPC) apenas poderá existir caso haja reconvenção. Nas ações de simples apreciação negativa, serve para impugnar factos constitutivos alegados pelo réu e para alegar factos impeditivos ou extintivos dos direitos invocados pelo réu"."
       },
       {
         "id": 60,
         "discipline": "Processo Civil",
         "front": "Qual a principal função dos articulados supervenientes?",
-        "back": "Os **articulados supervenientes** servem para apresentar factos constitutivos, modificativos ou extintivos do direito que forem supervenientes (objetiva ou subjetivamente), devendo ser apresentados pela parte a quem aproveitem até ao encerramento da discussão [20, 21]."
+        "back": "Os **articulados supervenientes** servem para apresentar factos constitutivos, modificativos ou extintivos do direito que forem supervenientes (objetiva ou subjetivamente), devendo ser apresentados pela parte a quem aproveitem até ao encerramento da discussão"."
       },
       {
         "id": 61,
         "discipline": "Processo Civil",
         "front": "Qual a finalidade do despacho pré-saneador e quando pode ser proferido?",
-        "back": "Finda a fase dos articulados, o juiz pode proferir um **despacho pré-saneador** (Art. 590 CPC) para indeferimento liminar da petição inicial, suprimento de exceções dilatórias, convite ao aperfeiçoamento dos articulados ou junção de documentos [22-25]."
+        "back": "Finda a fase dos articulados, o juiz pode proferir um **despacho pré-saneador** (Art. 590 CPC) para indeferimento liminar da petição inicial, suprimento de exceções dilatórias, convite ao aperfeiçoamento dos articulados ou junção de documentos."
       },
       {
         "id": 62,
         "discipline": "Processo Civil",
         "front": "Quais são as principais finalidades da audiência prévia?",
-        "back": "As finalidades da **audiência prévia** (Art. 591 CPC) incluem: tentativa de conciliação, discussão de facto e de direito sobre exceções dilatórias ou para conhecimento imediato do mérito, resposta a exceções, delimitação do objeto do litígio, prolação do despacho saneador e programação da audiência final [26-32]."
+        "back": "As finalidades da **audiência prévia** (Art. 591 CPC) incluem: tentativa de conciliação, discussão de facto e de direito sobre exceções dilatórias ou para conhecimento imediato do mérito, resposta a exceções, delimitação do objeto do litígio, prolação do despacho saneador e programação da audiência final."
       },
       {
         "id": 63,
         "discipline": "Processo Civil",
         "front": "Quando é que a audiência prévia não se realiza ou pode ser dispensada?",
-        "back": "A audiência prévia **não se realiza** em ações não contestadas que prossigam nos termos do Art. 568 b) a d) CPC, ou quando o processo finda com despacho saneador por procedência de exceções dilatórias já debatidas (Art. 592 CPC) [33, 34]. Pode ser **dispensada** em ações superiores a 15.000€ ou em ações inferiores a 15.000€ por desnecessidade ou inadequação (Art. 593 e 597 CPC) [35, 36]."
+        "back": "A audiência prévia **não se realiza** em ações não contestadas que prossigam nos termos do Art. 568 b) a d) CPC, ou quando o processo finda com despacho saneador por procedência de exceções dilatórias já debatidas (Art. 592 CPC)". Pode ser **dispensada** em ações superiores a 15.000€ ou em ações inferiores a 15.000€ por desnecessidade ou inadequação (Art. 593 e 597 CPC)"."
       },
       {
         "id": 64,
         "discipline": "Processo Civil",
         "front": "Qual a sequência da audiência final?",
-        "back": "A audiência final (Art. 604 CPC) segue a sequência de: tentativa de conciliação, depoimentos de parte, exibição de reproduções (cinematográficas/fonográficas), esclarecimentos verbais dos peritos, inquirição de testemunhas e alegações orais [37, 38]."
+        "back": "A audiência final (Art. 604 CPC) segue a sequência de: tentativa de conciliação, depoimentos de parte, exibição de reproduções (cinematográficas/fonográficas), esclarecimentos verbais dos peritos, inquirição de testemunhas e alegações orais"."
       },
       {
         "id": 65,
         "discipline": "Processo Civil",
         "front": "Quais são os elementos essenciais que devem constar numa sentença?",
-        "back": "A sentença deve conter: identificação das partes e do objeto do litígio, indicação dos factos provados e não provados, aplicação das normas jurídicas correspondentes, e condenação das partes em custas [39, 40]."
+        "back": "A sentença deve conter: identificação das partes e do objeto do litígio, indicação dos factos provados e não provados, aplicação das normas jurídicas correspondentes, e condenação das partes em custas"."
       },
       {
         "id": 66,
         "discipline": "Processo Civil",
         "front": "Quando ocorre o esgotamento do poder jurisdicional do juiz e quais as exceções?",
-        "back": "O poder jurisdicional do juiz **esgota-se** com a prolação da sentença (Art. 613, n.º 1 CPC). As exceções permitem ao juiz voltar a pronunciar-se em casos de erros materiais, suprimento de nulidades e reforma da sentença [41, 42]."
+        "back": "O poder jurisdicional do juiz **esgota-se** com a prolação da sentença (Art. 613, n.º 1 CPC). As exceções permitem ao juiz voltar a pronunciar-se em casos de erros materiais, suprimento de nulidades e reforma da sentença"."
       },
       {
         "id": 67,
         "discipline": "Processo Civil",
         "front": "Quais as causas de nulidade da sentença (Art. 615 CPC)?",
-        "back": "A sentença é nula se: não contiver a assinatura do juiz; não especificar os fundamentos de facto e direito; os fundamentos estiverem em oposição com a decisão; for obscura ou ambígua; o juiz deixe de se pronunciar sobre questões que devesse apreciar (omissão de pronúncia); ou conheça de questões que não poderia tomar conhecimento (excesso de pronúncia); ou condene em quantidade superior ou objeto diverso do pedido [43]."
+        "back": "A sentença é nula se: não contiver a assinatura do juiz; não especificar os fundamentos de facto e direito; os fundamentos estiverem em oposição com a decisão; for obscura ou ambígua; o juiz deixe de se pronunciar sobre questões que devesse apreciar (omissão de pronúncia); ou conheça de questões que não poderia tomar conhecimento (excesso de pronúncia); ou condene em quantidade superior ou objeto diverso do pedido"."
       },
       {
         "id": 68,
         "discipline": "Processo Civil",
         "front": "Diferencie litispendência de caso julgado.",
-        "back": "Ambos exigem a tríplice identidade (sujeitos, pedido, causa de pedir - Art. 581 CPC). Na **litispendência**, a ação primeiramente começada ainda está em curso. No **caso julgado**, a ação primeiramente começada já foi decidida por decisão que não admite recurso ordinário [44]."
+        "back": "Ambos exigem a tríplice identidade (sujeitos, pedido, causa de pedir - Art. 581 CPC). Na **litispendência**, a ação primeiramente começada ainda está em curso. No **caso julgado**, a ação primeiramente começada já foi decidida por decisão que não admite recurso ordinário"."
       },
       {
         "id": 69,
         "discipline": "Processo Civil",
         "front": "O que é a citação e quando é utilizada?",
-        "back": "A **citação** é o ato processual que dá conhecimento ao réu de que foi proposta uma ação contra ele, ou para chamar pela primeira vez ao processo alguma pessoa interessada na causa. É a primeira e única vez que uma parte é chamada ao processo desta forma [45, 46]."
+        "back": "A **citação** é o ato processual que dá conhecimento ao réu de que foi proposta uma ação contra ele, ou para chamar pela primeira vez ao processo alguma pessoa interessada na causa. É a primeira e única vez que uma parte é chamada ao processo desta forma"."
       },
       {
         "id": 70,
         "discipline": "Processo Civil",
         "front": "Quando se considera a citação efetuada no caso de citação postal?",
-        "back": "Regra geral, a citação postal considera-se efetuada **no dia da assinatura do aviso de receção ou da recusa em recebê-lo** (Art. 230, n.º 1 CPC). Nalguns casos específicos, considera-se efetuada no oitavo dia posterior ao do aviso [47]."
+        "back": "Regra geral, a citação postal considera-se efetuada **no dia da assinatura do aviso de receção ou da recusa em recebê-lo** (Art. 230, n.º 1 CPC). Nalguns casos específicos, considera-se efetuada no oitavo dia posterior ao do aviso"."
       },
       {
         "id": 71,
         "discipline": "Processo Civil",
         "front": "Quando se presume efetuada uma notificação eletrónica?",
-        "back": "A **notificação** presume-se efetuada no **terceiro dia posterior ao do envio** ou no primeiro dia útil imediatamente seguinte, quando não o seja. A contagem inicia-se a partir da data da certificação em sistema Citius [48, 49]."
+        "back": "A **notificação** presume-se efetuada no **terceiro dia posterior ao do envio** ou no primeiro dia útil imediatamente seguinte, quando não o seja. A contagem inicia-se a partir da data da certificação em sistema Citius"."
       },
       {
         "id": 72,
         "discipline": "Processo Civil",
         "front": "Quais as regras gerais para a contagem dos prazos processuais?",
-        "back": "1. **Início**: Nunca se inclui o dia do evento [50]. 2. **Fim**: Termina sempre num dia útil, transferindo-se para o 1.º dia útil seguinte se cair em fim de semana ou feriado [51]. 3. **Continuidade**: Os prazos são contínuos e incluem sábados, domingos e feriados [52]. 4. **Suspensão**: Os prazos suspendem-se durante as férias judiciais, exceto em prazos superiores a 6 meses ou processos urgentes [53]."
+        "back": "1. **Início**: Nunca se inclui o dia do evento". 2. **Fim**: Termina sempre num dia útil, transferindo-se para o 1.º dia útil seguinte se cair em fim de semana ou feriado". 3. **Continuidade**: Os prazos são contínuos e incluem sábados, domingos e feriados". 4. **Suspensão**: Os prazos suspendem-se durante as férias judiciais, exceto em prazos superiores a 6 meses ou processos urgentes"."
       },
       {
         "id": 73,
         "discipline": "Processo Civil",
         "front": "Qual o prazo geral para contestar e para replicar, e qual o prazo supletivo?",
-        "back": "O prazo para **contestar** é de 30 dias (Art. 569, n.º 1 CPC) [54]. O prazo para a **réplica** é de 30 dias (Art. 585 CPC) [54]. O prazo **geral supletivo** é de 10 dias (Art. 149, n.º 1 CPC) [55]."
+        "back": "O prazo para **contestar** é de 30 dias (Art. 569, n.º 1 CPC)". O prazo para a **réplica** é de 30 dias (Art. 585 CPC)". O prazo **geral supletivo** é de 10 dias (Art. 149, n.º 1 CPC)"."
       },
       {
         "id": 74,
         "discipline": "Processo Civil",
         "front": "Qual a regra especial para o prazo de defesa com pluralidade de réus?",
-        "back": "Quando há pluralidade de réus e os prazos de defesa terminam em dias diferentes, a contestação de todos ou de cada um pode ser oferecida **até ao termo do prazo que começou a correr em último lugar** (Art. 569, n.º 2 CPC) [56]."
+        "back": "Quando há pluralidade de réus e os prazos de defesa terminam em dias diferentes, a contestação de todos ou de cada um pode ser oferecida **até ao termo do prazo que começou a correr em último lugar** (Art. 569, n.º 2 CPC)"."
       },
       {
         "id": 75,
         "discipline": "Processo Civil",
         "front": "Qual o limite das dilações em procedimentos cautelares?",
-        "back": "Em procedimentos cautelares, a **dilação não pode ser superior a 10 dias**, mesmo que as regras gerais prevejam um período mais longo (Art. 366, n.º 3 CPC) [57-59]."
+        "back": "Em procedimentos cautelares, a **dilação não pode ser superior a 10 dias**, mesmo que as regras gerais prevejam um período mais longo (Art. 366, n.º 3 CPC)."
       },
       {
         "id": 76,
         "discipline": "Processo Civil",
         "front": "O que acontece se um ato processual for praticado fora do prazo, mas nos 3 dias úteis seguintes?",
-        "back": "É possível praticar o ato, mas sujeito ao **pagamento de uma multa**, que será tanto maior quantos mais dias forem utilizados (Art. 139, n.º 5 CPC) [60-62]."
+        "back": "É possível praticar o ato, mas sujeito ao **pagamento de uma multa**, que será tanto maior quantos mais dias forem utilizados (Art. 139, n.º 5 CPC)."
       },
       {
         "id": 77,
         "discipline": "Processo Civil",
         "front": "O que é personalidade judiciária e qual a sua regra geral?",
-        "back": "A **personalidade judiciária** é a suscetibilidade de ser parte em juízo (Art. 11, n.º 1 CPC). A regra geral é que **quem tem personalidade jurídica tem igualmente personalidade judiciária** (Art. 11, n.º 2 CPC) [63, 64]."
+        "back": "A **personalidade judiciária** é a suscetibilidade de ser parte em juízo (Art. 11, n.º 1 CPC). A regra geral é que **quem tem personalidade jurídica tem igualmente personalidade judiciária** (Art. 11, n.º 2 CPC)"."
       },
       {
         "id": 78,
         "discipline": "Processo Civil",
         "front": "Mencione três entidades que têm personalidade judiciária sem ter personalidade jurídica.",
-        "back": "A herança jacente, as associações sem personalidade jurídica e as sociedades civis (Art. 12 CPC) [65]."
+        "back": "A herança jacente, as associações sem personalidade jurídica e as sociedades civis (Art. 12 CPC)"."
       },
       {
         "id": 79,
         "discipline": "Processo Civil",
         "front": "O que é capacidade judiciária?",
-        "back": "A **capacidade judiciária** consiste na suscetibilidade de estar, por si, em juízo (Art. 15, n.º 1 CPC) [66, 67]."
+        "back": "A **capacidade judiciária** consiste na suscetibilidade de estar, por si, em juízo (Art. 15, n.º 1 CPC)"."
       },
       {
         "id": 80,
         "discipline": "Processo Civil",
         "front": "O que é legitimidade processual ativa e passiva?",
-        "back": "O autor é **parte legítima** quando tem interesse direto em demandar, e o réu será **parte legítima** quando tem interesse direto em contradizer (Art. 30, n.º 1 CPC) [68]."
+        "back": "O autor é **parte legítima** quando tem interesse direto em demandar, e o réu será **parte legítima** quando tem interesse direto em contradizer (Art. 30, n.º 1 CPC)"."
       },
       {
         "id": 81,
         "discipline": "Processo Civil",
         "front": "Qual a diferença fundamental entre litisconsórcio e coligação?",
-        "back": "No **litisconsórcio**, existe pluralidade de partes e unidade quanto ao pedido. Na **coligação**, existe pluralidade de partes e pluralidade de pedidos [69, 70]."
+        "back": "No **litisconsórcio**, existe pluralidade de partes e unidade quanto ao pedido. Na **coligação**, existe pluralidade de partes e pluralidade de pedidos"."
       },
       {
         "id": 82,
         "discipline": "Processo Civil",
         "front": "Quais as consequências da preterição de litisconsórcio necessário?",
-        "back": "A preterição de litisconsórcio necessário conduz a uma exceção de **ilegitimidade** (Art. 33 CPC), que pode ser sanada através de intervenção espontânea ou provocada [71-73]."
+        "back": "A preterição de litisconsórcio necessário conduz a uma exceção de **ilegitimidade** (Art. 33 CPC), que pode ser sanada através de intervenção espontânea ou provocada."
       },
       {
         "id": 83,
         "discipline": "Processo Civil",
         "front": "Em que casos é obrigatória a constituição de advogado?",
-        "back": "É obrigatória a constituição de advogado em: 1. Causas de competência de tribunais com alçada em que seja admissível recurso ordinário (valor > 5.000€ ou > 2.500€ em Julgados de Paz). 2. Causas em que é sempre admissível recurso (Art. 629, n.ºs 2 e 3 CPC). 3. Recurso e causas propostas nos tribunais superiores (Art. 40 CPC) [74]."
+        "back": "É obrigatória a constituição de advogado em: 1. Causas de competência de tribunais com alçada em que seja admissível recurso ordinário (valor > 5.000€ ou > 2.500€ em Julgados de Paz). 2. Causas em que é sempre admissível recurso (Art. 629, n.ºs 2 e 3 CPC). 3. Recurso e causas propostas nos tribunais superiores (Art. 40 CPC)"."
       },
       {
         "id": 84,
         "discipline": "Processo Civil",
         "front": "Quais os tipos de competência interna dos tribunais?",
-        "back": "A competência interna afere-se em razão da **matéria**, do **valor**, da **hierarquia** e do **território** [75]."
+        "back": "A competência interna afere-se em razão da **matéria**, do **valor**, da **hierarquia** e do **território**"."
       },
       {
         "id": 85,
         "discipline": "Processo Civil",
         "front": "Qual o critério para a competência em razão do valor em instâncias centrais e locais?",
-        "back": "Se o valor da causa for **superior a 50.000€**, a causa deverá ser decidida pela **instância central**. Se o valor for **inferior a 50.000€**, a causa será decidida pela **instância local**, salvo atribuição a juízos de competência especializada ou a tribunal de competência alargada [76]."
+        "back": "Se o valor da causa for **superior a 50.000€**, a causa deverá ser decidida pela **instância central**. Se o valor for **inferior a 50.000€**, a causa será decidida pela **instância local**, salvo atribuição a juízos de competência especializada ou a tribunal de competência alargada"."
       },
       {
         "id": 86,
         "discipline": "Processo Civil",
         "front": "Quais são os valores das alçadas dos tribunais de 1.ª instância e da Relação?",
-        "back": "Os tribunais de **1.ª instância** têm uma alçada de **5.000€**. Os tribunais da **Relação** têm uma alçada de **30.000€** [77]."
+        "back": "Os tribunais de **1.ª instância** têm uma alçada de **5.000€**. Os tribunais da **Relação** têm uma alçada de **30.000€**"."
       },
       {
         "id": 87,
         "discipline": "Processo Civil",
         "front": "Quando ocorre incompetência absoluta do tribunal?",
-        "back": "Ocorre incompetência absoluta (Art. 96 CPC) em caso de infração de regras em razão da **matéria**, em razão da **hierarquia**, infração de regras de **competência internacional**, ou **preterição de tribunal arbitral** [78]."
+        "back": "Ocorre incompetência absoluta (Art. 96 CPC) em caso de infração de regras em razão da **matéria**, em razão da **hierarquia**, infração de regras de **competência internacional**, ou **preterição de tribunal arbitral**"."
       },
       {
         "id": 88,
         "discipline": "Processo Civil",
         "front": "Qual o efeito da declaração de incompetência relativa?",
-        "back": "O efeito da declaração de incompetência relativa (Art. 102 CPC) é a **remessa do processo para o tribunal competente**, e não a absolvição da instância [79]."
+        "back": "O efeito da declaração de incompetência relativa (Art. 102 CPC) é a **remessa do processo para o tribunal competente**, e não a absolvição da instância"."
       },
       {
         "id": 89,
         "discipline": "Processo Civil",
         "front": "Em que situações a instância pode ser suspensa?",
-        "back": "A instância pode ser suspensa por: falecimento ou extinção da parte; falecimento ou impedimento do mandatário; determinação do juiz ou acordo das partes (máx. 3 meses); quando a decisão da causa depende do julgamento de outra ação já proposta (causa prejudicial); e em outros casos previstos na lei (Art. 269, 270, 271, 272 CPC) [80, 81]."
+        "back": "A instância pode ser suspensa por: falecimento ou extinção da parte; falecimento ou impedimento do mandatário; determinação do juiz ou acordo das partes (máx. 3 meses); quando a decisão da causa depende do julgamento de outra ação já proposta (causa prejudicial); e em outros casos previstos na lei (Art. 269, 270, 271, 272 CPC)"."
       },
       {
         "id": 90,
         "discipline": "Processo Civil",
         "front": "Diferencie desistência do pedido de desistência da instância.",
-        "back": "A **desistência do pedido** extingue o direito do autor, impedindo nova ação com o mesmo objeto (caso julgado material) [82]. A **desistência da instância** apenas faz cessar o processo instaurado, sendo possível iniciar um novo processo com idêntico objeto (caso julgado formal) [82]."
+        "back": "A **desistência do pedido** extingue o direito do autor, impedindo nova ação com o mesmo objeto (caso julgado material)". A **desistência da instância** apenas faz cessar o processo instaurado, sendo possível iniciar um novo processo com idêntico objeto (caso julgado formal)"."
       },
       {
         "id": 91,
         "discipline": "Processo Civil",
         "front": "Qual o critério para fixação do valor da causa em pedidos alternativos ou subsidiários?",
-        "back": "Em **pedidos alternativos**, atende-se sempre ao pedido de **maior valor**. Em **pedidos subsidiários**, atender-se-á ao pedido formulado em **primeiro lugar** [83]."
+        "back": "Em **pedidos alternativos**, atende-se sempre ao pedido de **maior valor**. Em **pedidos subsidiários**, atender-se-á ao pedido formulado em **primeiro lugar**"."
       },
       {
         "id": 92,
         "discipline": "Processo Civil",
         "front": "Quais os três requisitos principais das providências cautelares?",
-        "back": "Os três requisitos são: **fumus boni iuris** (probabilidade séria da existência do direito), **periculum in mora** (fundado receio de lesão grave e dificilmente reparável), e **proporcionalidade** (ponderação entre as medidas e os interesses a proteger) [84]."
+        "back": "Os três requisitos são: **fumus boni iuris** (probabilidade séria da existência do direito), **periculum in mora** (fundado receio de lesão grave e dificilmente reparável), e **proporcionalidade** (ponderação entre as medidas e os interesses a proteger)"."
       },
       {
         "id": 93,
         "discipline": "Processo Civil",
         "front": "Mencione três causas de caducidade de uma providência cautelar.",
-        "back": "Uma providência cautelar caduca se: o requerente não propuser a ação principal em 30 dias; a ação for julgada improcedente por decisão transitada em julgado; ou o direito acautelado se extinguir (Art. 373, n.º 1 CPC) [85]."
+        "back": "Uma providência cautelar caduca se: o requerente não propuser a ação principal em 30 dias; a ação for julgada improcedente por decisão transitada em julgado; ou o direito acautelado se extinguir (Art. 373, n.º 1 CPC)"."
       },
       {
         "id": 94,
         "discipline": "Processo Civil",
         "front": "O que é a inversão do contencioso e quais os seus requisitos?",
-        "back": "A **inversão do contencioso** permite que a providência cautelar substitua a decisão final, dispensando a ação principal. Requisitos (Art. 369 CPC): requerimento da parte; natureza da providência adequada à composição definitiva do litígio; matéria adquirida no procedimento cautelar que permita convicção segura sobre a existência do direito [86, 87]."
+        "back": "A **inversão do contencioso** permite que a providência cautelar substitua a decisão final, dispensando a ação principal. Requisitos (Art. 369 CPC): requerimento da parte; natureza da providência adequada à composição definitiva do litígio; matéria adquirida no procedimento cautelar que permita convicção segura sobre a existência do direito"."
       },
       {
         "id": 95,
         "discipline": "Processo Civil",
         "front": "Qual a diferença entre Arresto e Arrolamento?",
-        "back": "O **arresto** visa garantir o pagamento de dívidas do credor, mantendo bens na titularidade do devedor contra dissipação (foco no crédito) [88]. O **arrolamento** visa a descrição, avaliação e depósito de bens, devido a justo receio de extravio/dissipação, para conservação (foco nos bens) [89]."
+        "back": "O **arresto** visa garantir o pagamento de dívidas do credor, mantendo bens na titularidade do devedor contra dissipação (foco no crédito)". O **arrolamento** visa a descrição, avaliação e depósito de bens, devido a justo receio de extravio/dissipação, para conservação (foco nos bens)"."
       },
       {
         "id": 96,
         "discipline": "Processo Civil",
         "front": "Quando podem ser apresentados documentos em 1.ª instância?",
-        "back": "Devem ser apresentados com o articulado em que se alegam os factos correspondentes. Se não o forem, podem sê-lo até 20 dias antes da audiência final (com multa), ou posteriormente se a junção se tornar necessária por ocorrência posterior ou impossibilidade anterior [90]."
+        "back": "Devem ser apresentados com o articulado em que se alegam os factos correspondentes. Se não o forem, podem sê-lo até 20 dias antes da audiência final (com multa), ou posteriormente se a junção se tornar necessária por ocorrência posterior ou impossibilidade anterior"."
       },
       {
         "id": 97,
         "discipline": "Processo Civil",
         "front": "Diferencie depoimento de parte de declarações de parte.",
-        "back": "O **depoimento de parte** destina-se a provocar a confissão, a iniciativa é do juiz ou da parte contrária [91]. As **declarações de parte** incidem sobre factos favoráveis ou desfavoráveis de conhecimento direto, a iniciativa é da própria parte e não visa primariamente a confissão [91, 92]."
+        "back": "O **depoimento de parte** destina-se a provocar a confissão, a iniciativa é do juiz ou da parte contrária". As **declarações de parte** incidem sobre factos favoráveis ou desfavoráveis de conhecimento direto, a iniciativa é da própria parte e não visa primariamente a confissão"."
       },
       {
         "id": 98,
         "discipline": "Processo Civil",
         "front": "Qual a principal diferença entre recursos ordinários e extraordinários?",
-        "back": "Nos **recursos ordinários**, a decisão final ainda não transitou em julgado. Nos **recursos extraordinários**, a decisão já transitou em julgado [93, 94]."
+        "back": "Nos **recursos ordinários**, a decisão final ainda não transitou em julgado. Nos **recursos extraordinários**, a decisão já transitou em julgado"."
       }
     
 ];

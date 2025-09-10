@@ -702,7 +702,307 @@ const allFlashcards = [
         "id": 98,
         "discipline": "Processo Civil",
         "front": "Qual a principal diferença entre recursos ordinários e extraordinários?",
-        "back": "Nos **recursos ordinários**, a decisão final ainda não transitou em julgado. Nos **recursos extraordinários**, a decisão já transitou em julgado"
+        "back": "Nos **recursos ordinários**, a decisão final ainda não transitou em julgado. Nos **recursos extraordinários**, a decisão já transitou em julgado."
+      },
+      {
+        "id": 99,
+        "discipline": "Processo Penal",
+        "front": "Qual é a finalidade principal das medidas de coação e de garantia patrimonial no processo penal?",
+        "back": "As medidas de coação e de garantia patrimonial são mecanismos cautelares para assegurar a **eficácia da investigação** e a **boa administração da justiça**, sem comprometer os direitos fundamentais dos arguidos."
+      },
+      {
+        "id": 100,
+        "discipline": "Processo Penal",
+        "front": "Quando é que as medidas de coação podem ser impostas a alguém?",
+        "back": "As medidas de coação só podem ser impostas ao arguido e apenas **depois da sua constituição como arguido**. A constituição como arguido e a aplicação das medidas podem ocorrer na mesma diligência, desde que a constituição preceda a aplicação."
+      },
+      {
+        "id": 101,
+        "discipline": "Processo Penal",
+        "front": "Quais são as três características principais das medidas de coação, e a que princípios devem obedecer?",
+        "back": "As medidas de coação são **temporárias, cautelares e subsidiárias**. Devem respeitar os princípios da **necessidade, adequação e proporcionalidade**, previstos no artigo 193 do Código de Processo Penal."
+      },
+      {
+        "id": 102,
+        "discipline": "Processo Penal",
+        "front": "Quais são os requisitos gerais para a aplicação de uma medida de coação, para além da existência de fortes indícios de prática de crime?",
+        "back": "Além dos fortes indícios de prática de crime, deve verificar-se pelo menos um dos seguintes perigos: **fuga (ou perigo de fuga) do arguido**, **perigo de continuação da atividade criminosa** ou **perigo para a tranquilidade e ordem públicas**, ou **perigo de perturbação do inquérito** ou da recolha da prova."
+      },
+      {
+        "id": 103,
+        "discipline": "Processo Penal",
+        "front": "Qual é a medida de coação menos gravosa e quais são as suas principais obrigações para o arguido?",
+        "back": "O **Termo de Identidade e Residência (TIR)** é a medida menos gravosa. Implica que o arguido compareça perante a autoridade competente ou se mantenha à disposição dela quando a lei o obrigar ou for notificado, e não pode mudar de residência nem dela se ausentar por mais de cinco dias sem comunicar a nova residência ou o lugar onde possa ser encontrado."
+      },
+      {
+        "id": 104,
+        "discipline": "Processo Penal",
+        "front": "O que acontece se um arguido sujeito a TIR não puder ser notificado na morada indicada?",
+        "back": "Nesse caso, pode haver **julgamento na sua ausência**, com o arguido a ser representado pelo seu defensor, conforme os artigos 196, número 3, alínea d) e 333 do Código de Processo Penal."
+      },
+      {
+        "id": 105,
+        "discipline": "Processo Penal",
+        "front": "Qual é a finalidade da caução (art. 197 CPP) e em que tipo de crimes pode ser aplicada?",
+        "back": "A caução, prevista no artigo 197 do Código de Processo Penal, destina-se a assegurar o **cumprimento de obrigações patrimoniais** que resultem do processo ou da prática do crime. Só pode ser aplicada quando seja imputado um **crime punível com pena de prisão**."
+      },
+      {
+        "id": 106,
+        "discipline": "Processo Penal",
+        "front": "Em que condições a obrigação de permanência na habitação e a prisão preventiva podem ser aplicadas?",
+        "back": "A obrigação de permanência na habitação e a prisão preventiva são as medidas mais graves e só podem ser aplicadas **quando todas as outras medidas de coação forem inadequadas ou insuficientes** para acautelar os perigos existentes."
+      },
+      {
+        "id": 107,
+        "discipline": "Processo Penal",
+        "front": "Qual é a competência para aplicar medidas de coação?",
+        "back": "A competência para aplicar medidas de coação é do **juiz de instrução criminal**, após promoção do Ministério Público, ou do **próprio juiz na fase de julgamento**."
+      },
+      {
+        "id": 108,
+        "discipline": "Processo Penal",
+        "front": "De que formas um arguido ou o seu defensor podem reagir contra a aplicação de uma medida de coação?",
+        "back": "Podem reagir através de **recurso** (art. 219 CPP), de um **requerimento de alteração ou revogação** (art. 212 CPP) se os pressupostos se modificarem, ou, em casos de urgência, apresentando um **pedido de *habeas corpus*** (art. 220 a 224 CPP) nas situações previstas na lei, como a ultrapassagem do prazo legal de detenção."
+      },
+      {
+        "id": 109,
+        "discipline": "Processo Penal",
+        "front": "Qual é o objetivo das medidas de garantia patrimonial?",
+        "back": "As medidas de garantia patrimonial têm como objetivo **proteger interesses patrimoniais legítimos**, visando assegurar o pagamento de indemnizações às vítimas, as custas do processo e a perda de vantagens ilícitas para o Estado."
+},
+      {
+        "id": 110,
+        "discipline": "Processo Penal",
+        "front": "Quais são as duas principais medidas de garantia patrimonial e quais os seus requisitos?",
+        "back": "As medidas de garantia patrimonial são a **caução económica** e o **arresto preventivo**. Para a sua aplicação, são necessários três requisitos: **indícios suficientes da prática de crime**, **fundado receio de dissipação do património** e **interesse legítimo de terceiros** (Estado ou vítima)."
+      },
+      {
+        "id": 111,
+        "discipline": "Processo Penal",
+        "front": "Qual é a regra geral para a declaração de nulidade de um ato processual penal?",
+        "back": "A **violação ou inobservância das disposições da lei do processo penal só determina a nulidade do ato quando esta for expressamente cominada na lei** (art. 118, número 1 do Código de Processo Penal). Caso contrário, trata-se de uma irregularidade."
+      },
+      {
+        "id": 112,
+        "discipline": "Processo Penal",
+        "front": "Qual a diferença entre nulidades insanáveis e sanáveis?",
+        "back": "As **nulidades insanáveis** (art. 119 CPP) são tão graves que invalidam o ato, podendo o juiz conhecê-las oficiosamente em qualquer momento, independentemente de arguição. As **nulidades sanáveis** (art. 120, número 2 CPP) dependem de arguição para serem declaradas, e se não forem arguidas nos prazos legais, consideram-se sanadas."
+      },
+      {
+        "id": 113,
+        "discipline": "Processo Penal",
+        "front": "Mencione três exemplos de nulidades insanáveis.",
+        "back": "São nulidades insanáveis, entre outras: a **falta do número de juízes** ou jurados do tribunal; a **falta de promoção do processo pelo Ministério Público** ou a sua ausência a atos obrigatórios; a **ausência do arguido ou do seu defensor** em casos em que a lei exija a sua comparência."
+      },
+      {
+        "id": 114,
+        "discipline": "Processo Penal",
+        "front": "Mencione três exemplos de nulidades sanáveis.",
+        "back": "São nulidades sanáveis, entre outras: o **emprego de uma forma de processo quando a lei determinar outra**; a **ausência, por falta de notificação, do assistente e das partes civis** nos casos exigidos pela lei; a **falta de nomeação de intérprete** nos casos obrigatórios; a **insuficiência do inquérito ou da instrução** por omissão de atos legalmente obrigatórios."
+      },
+      {
+        "id": 115,
+        "discipline": "Processo Penal",
+        "front": "Qual o prazo geral para arguir uma nulidade sanável que tenha sido praticada num ato em que o interessado estava presente?",
+        "back": "Quando a nulidade for praticada em ato em que o interessado esteja presente, deve ser arguida **nesse momento**."
+      },
+      {
+        "id": 116,
+        "discipline": "Processo Penal",
+        "front": "Qual o prazo para arguir uma nulidade sanável respeitante ao inquérito ou à instrução?",
+        "back": "As nulidades respeitantes ao inquérito ou à instrução devem ser arguidas **até ao encerramento do debate instrutório** ou, não havendo instrução, **até cinco dias após a notificação do despacho que tiver encerrado o inquérito**."
+      },
+      {
+        "id": 117,
+        "discipline": "Processo Penal",
+        "front": "Como se reage a uma irregularidade processual e qual a sua consequência prática?",
+        "back": "Uma irregularidade tem de ser arguida pelos interessados **no próprio ato ou, se a este não tiverem assistido, nos três dias seguintes** àquele em que tiverem sido notificados para qualquer termo do processo ou intervindo em algum ato. A declaração de irregularidade implica a **invalidade do ato** e, se possível, a sua repetição."
+      },
+      {
+        "id": 118,
+        "discipline": "Processo Penal",
+        "front": "Quando é que uma nulidade sanável se considera sanada, para além da não arguição nos prazos?",
+        "back": "Uma nulidade sanável considera-se sanada se a pessoa interessada **renunciar expressamente a arguí-la**, **tiver aceitado expressamente os efeitos do ato anulável**, ou **se tiver prevalecido de faculdade a cujo exercício o ato anulável se dirigia**."
+      },
+      {
+        "id": 119,
+        "discipline": "Processo Penal",
+        "front": "Qual a diferença entre prazos substantivos e processuais no processo penal?",
+        "back": "Os **prazos substantivos** (ex: extinção direito de queixa, prescrição) seguem o artigo 279 do Código Civil e não têm dilação, multa ou suspensão nas férias judiciais. Os **prazos processuais** (legais ou judiciais) aplicam as regras do Código Civil e Processo Civil, são contínuos, mas suspendem nas férias judiciais, salvo exceções."
+      },
+      {
+        "id": 120,
+        "discipline": "Processo Penal",
+        "front": "Um processo penal urgente suspende nas férias judiciais? Dê um exemplo de processo urgente.",
+        "back": "Não, se o processo for urgente, **o prazo não se suspende nas férias judiciais**. Um exemplo de processo urgente é um caso de **crime de violência doméstica**."
+      },
+      {
+        "id": 121,
+        "discipline": "Processo Penal",
+        "front": "Quais são os períodos de férias judiciais em Portugal?",
+        "back": "As férias judiciais ocorrem **de 22 de Dezembro a 3 de Janeiro**, **de Domingo de Ramos a Segunda-feira de Páscoa** e **de 16 de Julho a 31 de Agosto**."
+      },
+      {
+        "id": 122,
+        "discipline": "Processo Penal",
+        "front": "Em que dia se considera efetuada uma notificação por via postal registada?",
+        "back": "Uma notificação por via postal registada considera-se efetuada no **terceiro dia posterior ao do envio**, quando seja útil."
+      },
+      {
+        "id": 123,
+        "discipline": "Processo Penal",
+        "front": "Mencione três tipos de atos que não podem ser notificados apenas ao mandatário.",
+        "back": "As notificações relativas à **acusação**, à **decisão instrutória**, à **contestação**, à **designação de dia para julgamento**, à **sentença**, às **medidas de coação e de garantia patrimonial** e à **dedução do pedido de indemnização civil** não podem ser feitas apenas ao mandatário."
+      },
+      {
+        "id": 124,
+        "discipline": "Processo Penal",
+        "front": "Quais são as três formas de poder praticar um ato processual após o prazo normal, em caso de perda?",
+        "back": "Um ato processual pode ser praticado após o prazo se houver **prova de justo impedimento**, **até 3 dias úteis após cessação do impedimento mediante pagamento de multa**, ou **depois de declarada a excecional complexidade do processo**."
+      },
+      {
+        "id": 125,
+        "discipline": "Processo Penal",
+        "front": "Quem dirige exclusivamente o inquérito no processo penal?",
+        "back": "O **Ministério Público** dirige exclusivamente o inquérito, conforme o artigo 262, número 1 do Código de Processo Penal."
+      },
+      {
+        "id": 126,
+        "discipline": "Processo Penal",
+        "front": "Em que fase processual o Juiz de Instrução Criminal (JIC) tem uma jurisdição absoluta?",
+        "back": "O JIC tem jurisdição absoluta na **fase de instrução**."
+      },
+      {
+        "id": 127,
+        "discipline": "Processo Penal",
+        "front": "Qual a consequência da preterição das regras de competência do tribunal?",
+        "back": "A preterição das regras de competência do tribunal é uma **nulidade insanável** (art. 119, alínea e) CPP). Determina que o processo seja remetido ao tribunal competente, e os atos praticados podem ser aproveitados se o tribunal competente assim decidir."
+      },
+      {
+        "id": 128,
+        "discipline": "Processo Penal",
+        "front": "Qual a diferença entre um suspeito e um arguido?",
+        "back": "O **suspeito não é um sujeito processual**, embora tenha alguns direitos (ex: direito ao silêncio, direito a ser constituído arguido). O **arguido é o sujeito processual central** e assume essa qualidade em situações específicas (ex: acusação, aplicação de medida de coação)."
+      },
+      {
+        "id": 129,
+        "discipline": "Processo Penal",
+        "front": "Mencione três situações em que a constituição como arguido é obrigatória antes da acusação.",
+        "back": "É obrigatória a constituição como arguido quando: **correndo inquérito contra pessoa determinada, esta prestar declarações perante qualquer autoridade judiciária ou OPC**; **lhe for aplicada uma medida de coação**; ou **o suspeito for detido**."
+      },
+      {
+        "id": 130,
+        "discipline": "Processo Penal",
+        "front": "Qual é a principal garantia do arguido durante um interrogatório, especialmente se não dominar a língua portuguesa?",
+        "back": "É sempre obrigatória a **assistência de defensor**, sob pena de nulidade insanável (art. 64/1 e 119, c) CPP). Se o arguido não dominar a língua portuguesa, deve ser **nomeado intérprete**, sob pena de as declarações não poderem ser usadas como prova."
+      },
+      {
+        "id": 131,
+        "discipline": "Processo Penal",
+        "front": "Quais as implicações de uma confissão integral e sem reservas do arguido em julgamento?",
+        "back": "Implica a **renúncia à produção da prova** relativa aos factos imputados (que se consideram provados), a passagem de imediato às **alegações orais**, a **determinação da sanção aplicável** e a **redução da taxa de justiça em metade**."
+      },
+      {
+        "id": 132,
+        "discipline": "Processo Penal",
+        "front": "O defensor pode assistir vários arguidos no mesmo processo?",
+        "back": "Sim, o defensor **pode assistir vários arguidos**, conforme consta do artigo 65 do Código de Processo Penal."
+      },
+      {
+        "id": 133,
+        "discipline": "Processo Penal",
+        "front": "Qual é a definição legal do Assistente no processo penal?",
+        "back": "O Assistente é um **colaborador do Ministério Público**, conforme definido pelo artigo 69 do Código de Processo Penal."
+      },
+      {
+        "id": 134,
+        "discipline": "Processo Penal",
+        "front": "Mencione três direitos processuais do Assistente.",
+        "back": "O Assistente pode: **intervir nas fases preliminares** oferecendo provas e requerendo diligências; **deduzir acusação independente** da do Ministério Público; **requerer a abertura de instrução**; ou **interpor recurso das decisões** que o afetem."
+      },
+      {
+        "id": 135,
+        "discipline": "Processo Penal",
+        "front": "Quais os requisitos para a constituição como Assistente?",
+        "back": "Os requisitos são: **legitimidade** (ser uma das pessoas mencionadas no art. 68/1 CPP); **prazo** (depende do crime e da fase); **ter mandatário constituído** (art. 70/1 CPP); e **pagar a taxa de justiça devida** (art. 519 CPP)."
+      },
+      {
+        "id": 136,
+        "discipline": "Processo Penal",
+        "front": "Quais são as três fases do processo comum e quais delas são obrigatórias?",
+        "back": "As três fases são o **Inquérito**, a **Instrução** e o **Julgamento**. Apenas o **Inquérito e o Julgamento são obrigatórios**, sendo a Instrução facultativa."
+      },
+      {
+        "id": 137,
+        "discipline": "Processo Penal",
+        "front": "O que acontece se o Ministério Público não proferir o despacho de abertura do inquérito?",
+        "back": "Se não houver despacho de abertura do inquérito, o **processo é nulo** (art. 119, número 1, alínea b) do Código de Processo Penal)."
+      },
+      {
+        "id": 138,
+        "discipline": "Processo Penal",
+        "front": "Os prazos para a conclusão do inquérito são peremptórios? Quais as consequências da sua ultrapassagem?",
+        "back": "Os prazos para a conclusão do inquérito (art. 276 CPP) são **meramente ordenadores**, o que significa que, em princípio, **não há consequências diretas quanto à sua ultrapassagem**, exceto no que toca ao segredo de justiça, que pode cessar."
+      },
+      {
+        "id": 139,
+        "discipline": "Processo Penal",
+        "front": "Mencione duas formas de encerramento do inquérito, para além da acusação e do arquivamento simples.",
+        "back": "O inquérito também pode terminar com **despacho de arquivamento em caso de dispensa de pena**, com a **suspensão provisória do processo**, ou com o **envio para a forma de processo sumaríssimo**."
+      },
+      {
+        "id": 140,
+        "discipline": "Processo Penal",
+        "front": "Em que momento um pedido de indemnização civil (PIC) pode ser deduzido no processo penal?",
+        "back": "O PIC pode ser deduzido em três momentos: **na acusação** (MP); **no requerimento autónomo ou na acusação subordinada** (assistente); ou **no requerimento articulado** (lesado que manifestou propósito de deduzir PIC)."
+      },
+      {
+        "id": 141,
+        "discipline": "Processo Penal",
+        "front": "Qual é a finalidade da fase de instrução no processo comum?",
+        "back": "A instrução serve para que um juiz **comprove a decisão de deduzir acusação ou de arquivar o inquérito** tomada pelo Ministério Público, ou seja, para que haja controlo judicial dessa decisão. Também pode servir para **modificar o objeto do processo**."
+      },
+      {
+        "id": 142,
+        "discipline": "Processo Penal",
+        "front": "O que é um Requerimento para Abertura de Instrução (RAI) e quem o pode apresentar?",
+        "back": "O RAI é um pedido para que o juiz comprove a decisão do MP. Pode ser apresentado pelo **arguido**, relativamente a factos pelos quais tenha sido acusado, ou pelo **assistente**, relativamente a factos pelos quais o Ministério Público não tiver deduzido acusação."
+      },
+      {
+        "id": 143,
+        "discipline": "Processo Penal",
+        "front": "Qual é o prazo para a apresentação do RAI, tanto para o arguido como para o assistente?",
+        "back": "O prazo para a apresentação do RAI é de **20 dias**, a contar da notificação da acusação (para o arguido) ou da notificação da acusação ou do arquivamento (para o assistente)."
+      },
+      {
+        "id": 144,
+        "discipline": "Processo Penal",
+        "front": "Qual é a diferença fundamental entre o RAI do arguido e o do assistente em termos de conteúdo?",
+        "back": "O arguido pode requerer o RAI mesmo que pretenda apenas **discutir razões de direito**. O assistente, por outro lado, **não pode requerer a abertura da instrução só para discutir questões de direito**, devendo apresentar razos de facto."
+      },
+      {
+        "id": 145,
+        "discipline": "Processo Penal",
+        "front": "Quando é que um despacho de pronúncia é considerado nulo, e como se reage a essa nulidade?",
+        "back": "O despacho de pronúncia é nulo quando **pronuncie o arguido por factos que constituam alteração substancial dos descritos na acusação ou RAI** (art. 309/1 CPP). Esta nulidade deve ser **arguida no prazo de oito dias** contados da decisão, e é reclamável para o próprio JIC. O despacho de indeferimento da arguição é recorrível."
+      },
+      {
+        "id": 146,
+        "discipline": "Processo Penal",
+        "front": "Qual a principal diferença na tramitação entre o processo comum e as formas de processo especiais?",
+        "back": "As formas de processo especiais são empregadas para crimes de menor gravidade e menos complexos, e, ao contrário do processo comum, **não têm fase de instrução**."
+      },
+      {
+        "id": 147,
+        "discipline": "Processo Penal",
+        "front": "Quais são as três formas de processo especiais?",
+        "back": "As três formas de processo especiais são o **processo sumário**, o **processo abreviado** e o **processo sumaríssimo**."
+      },
+      {
+        "id": 148,
+        "discipline": "Processo Penal",
+        "front": "Qual a principal limitação da pena para a aplicação das formas de processo especiais (sumário, abreviado, sumaríssimo)?",
+        "back": "Todas as formas de processo especiais têm como limite de aplicabilidade a crimes puníveis com **pena de prisão cujo limite máximo não seja superior a 5 anos**."
       }
     
 ];

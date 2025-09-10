@@ -6,18 +6,19 @@ const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// --- ENHANCED STARTUP DEBUGGING ---
+// --- ENHANCED STARTUP DEBUGGING & CONFIGURATION ---
 console.log("--- [STARTUP] Reading environment variables ---");
-console.log(`[STARTUP] Value for FRONTEND_URL: ${process.env.FRONTEND_URL}`);
-console.log(`[STARTUP] Value for LEARNWORLDS_SCHOOL_URL: ${process.env.LEARNWORLDS_SCHOOL_URL}`);
+const FRONTEND_URL = process.env.FRONTEND_URL;
+const LEARNWORLDS_SCHOOL_URL = process.env.LEARNWORLDS_SCHOOL_URL;
+const LEARNWORLDS_CLIENT_ID = process.env.LEARNWORLDS_CLIENT_ID;
+console.log(`[STARTUP] Value for FRONTEND_URL: ${FRONTEND_URL}`);
+console.log(`[STARTUP] Value for LEARNWORLDS_SCHOOL_URL: ${LEARNWORLDS_SCHOOL_URL}`);
+console.log(`[STARTUP] Value for LEARNWORLDS_CLIENT_ID: ${LEARNWORLDS_CLIENT_ID ? 'Loaded' : 'MISSING!'}`);
 console.log("--- [STARTUP] Finished reading environment variables ---");
 
 // --- CONFIGURATION CHECK ---
-const FRONTEND_URL = process.env.FRONTEND_URL;
-const LEARNWORLDS_SCHOOL_URL = process.env.LEARNWORLDS_SCHOOL_URL;
-
-if (!FRONTEND_URL || !LEARNWORLDS_SCHOOL_URL) {
-    console.error("[CRASH] Critical environment variables are missing or undefined! The application will now exit.");
+if (!FRONTEND_URL || !LEARNWORLDS_SCHOOL_URL || !LEARNWORLDS_CLIENT_ID) {
+    console.error("[CRASH] Critical environment variables are missing! Ensure FRONTEND_URL, LEARNWORLDS_SCHOOL_URL, and LEARNWORLDS_CLIENT_ID are set.");
     process.exit(1);
 }
 
@@ -54,7 +55,10 @@ const checkAuth = async (req, res, next) => {
         console.log(`[AUTH] Making proxy request to: ${learnworldsApiUrl}`);
 
         const response = await axios.get(learnworldsApiUrl, {
-            headers: { 'Cookie': req.headers.cookie }
+            headers: { 
+                'Cookie': req.headers.cookie,
+                'Lw-Client': LEARNWORLDS_CLIENT_ID // <<< THE CRITICAL FIX IS HERE
+            }
         });
         
         if (response.status === 200) {
@@ -86,21 +90,7 @@ const checkAuth = async (req, res, next) => {
 // --- API ROUTES ---
 app.get('/api/quiz-data', checkAuth, (req, res) => {
     console.log("[API] /api/quiz-data route hit successfully after auth.");
-    const { discipline } = req.query;
-
-    if (!discipline) {
-        console.log("[API-ERROR] Discipline parameter is missing.");
-        return res.status(400).json({ error: 'Discipline parameter is required.' });
-    }
-
-    console.log(`[API] Filtering questions for discipline: ${discipline}`);
-    
-    if (discipline === 'Geral') {
-        res.json(allQuestions);
-    } else {
-        const filteredQuestions = allQuestions.filter(q => q.discipline === discipline);
-        res.json(filteredQuestions);
-    }
+    res.json(allQuestions);
 });
 
 
@@ -109,5 +99,6 @@ app.listen(PORT, () => {
     console.log(`--- Server started successfully on port ${PORT} ---`);
     console.log(`[CONFIG] Frontend URL configured for CORS: ${FRONTEND_URL}`);
     console.log(`[CONFIG] Learnworlds School URL for API calls: ${LEARNWORLDS_SCHOOL_URL}`);
+    console.log(`[CONFIG] Learnworlds Client ID is loaded.`);
 });
 
